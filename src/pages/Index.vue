@@ -45,6 +45,7 @@
 
 <script>
 import HeroSection from '../components/HeroSection.vue';
+/* eslint import/no-unresolved: off */
 import SVGMap from '~/assets/images/map.svg';
 import SVGUser from '~/assets/images/user.svg';
 import SVGMail from '~/assets/images/mail.svg';
