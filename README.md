@@ -1,6 +1,6 @@
-# Gridsome boilerplate
+# Dental Care Arvada - Gridsome website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/924fc724-1e13-44e8-8161-1d0ce716de9c/deploy-status)](https://app.netlify.com/sites/gridsome-boilerplate/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/48c48095-c344-470c-8093-094bd6dea267/deploy-status)](https://app.netlify.com/sites/dentalcarearvada/deploys)
 
 This is a JAMstack boilerplate using Gridsome that comes with many features out of the box. It utilizes Bootstrap that is well known for powerful styling and layout. Ready to be deployed, automagically imports data to CMS and sets up your /admin page for easy access to edit your content.
 
@@ -26,13 +26,3 @@ This starter project includes some of the latest powerful technologies.
 "build": "gridsome build",      // Build to /dist
 "explore": "gridsome explore"   // GraphQL explorer
 ```
-
-### Further research
-
-- [Building Serverless CRUD apps with Netlify Functions & FaunaDB](https://www.netlify.com/blog/2018/07/09/building-serverless-crud-apps-with-netlify-functions--faunadb/)
-- [How to Integrate Netlify Forms in a Vue App](https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/)
-- [Netlify Functions examples](https://github.com/netlify/functions)
-- [Serverless Auth strategies](https://github.com/DavidWells/serverless-auth-strategies)
-- [Netlify/FaunaDB TodoMVC](https://github.com/fauna/netlify-faunadb-todomvc)
-- [netlify-fauna-todo](https://github.com/sw-yx/netlify-fauna-todo)
-- [Netlify + FaunaDB](https://github.com/netlify/netlify-faunadb-example)
