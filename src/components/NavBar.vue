@@ -1,22 +1,31 @@
 <template>
   <b-navbar
     class="px-0"
-    :class="{ 'hidden-navbar': !showNavbar && !showCollapse }"
+    :class="{ 'hide-navbar': !showNavbar && !showCollapse }"
     fixed="top"
-    toggleable="md"
+    toggleable="lg"
   >
-    <div class="container-fluid">
-      <b-navbar-brand class="mx-4">
-        <g-link to="/agency">
-          <g-image alt="logo" immediate src="../../assets/images/logo.png" width="40" />
+    <b-container fluid>
+      <b-navbar-brand class="mx-0">
+        <g-link to="/">
+          <g-image alt="logo" src="~/assets/images/dental-logo.png" immediate />
         </g-link>
       </b-navbar-brand>
 
       <b-navbar-toggle class="mx-4" target="nav_collapse">
-        <span class="hamburger-menu">=</span>
+        <button
+          class="hamburger hamburger--collapse"
+          type="button"
+          role="navigation"
+          aria-label="Hamburger Menu"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner" />
+          </span>
+        </button>
       </b-navbar-toggle>
 
-      <b-collapse is-nav id="nav_collapse" v-model="showCollapse">
+      <b-collapse is-nav id="nav_collapse" v-model="showCollapse" class="nav-collapse">
         <b-navbar-nav class="ml-auto px-4">
           <b-nav-item>
             <g-link class="" to="/agency">Home</g-link>
@@ -41,7 +50,7 @@
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
-    </div>
+    </b-container>
   </b-navbar>
 </template>
 
@@ -106,7 +115,7 @@ export default {
         .getElementById('app')
         .querySelectorAll('section')
         .forEach(el => {
-          el.style.filter = val ? 'blur(8px)' : '';
+          el.style.filter = val ? 'blur(12px)' : '';
         });
     },
     triggerNetlifyIdentityAction(action) {
@@ -125,41 +134,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hidden-navbar {
+.hide-navbar {
   transform: translate3d(0, -100%, 0);
 }
 
 nav {
-  background-color: white;
+  background-image: linear-gradient(180deg, #ffffffff 0%, #ffffff00 100%);
   transform: translate3d(0, 0, 0);
   transition: 0.1s transform linear;
 
-  .hamburger-menu {
-    // text-shadow: 0px 1px 2px #aaaaaa88, 1px 2px 3px #00000088;
+  @media (max-width: 640px) {
+    background-image: linear-gradient(180deg, #ffffffff 0%, #ffffff00 100%);
   }
+
+  .hamburger {
+    .hamburger-inner,
+    .hamburger-inner:after,
+    .hamburger-inner:before {
+      background-color: var(--light);
+    }
+  }
+
   .nav-link {
     a {
       color: var(--dark);
       font-size: 100%;
       text-decoration: none;
+
       &:hover {
         color: var(--primary);
       }
+
+      @media (max-width: 640px) {
+        color: var(--light);
+        text-shadow: 1px 2px 4px #00000088;
+        font-size: 2rem;
+      }
     }
-    // @extend .hamburger-menu;
-    // @media (max-width: 640px) {
-    //   font-size: 2rem;
-    // }
   }
+
   .container-fluid {
     max-width: 1240px;
   }
 
-  #nav_collapse {
-    background-image: linear-gradient(180deg, #00000000 0%, #00000088 100%);
+  .nav-collapse {
+    background-image: linear-gradient(180deg, #ffffff00 0%, #00000088 100%);
     height: 100vh;
     transition: height 0.25s ease-out;
 
+    // disable gradient > 640px
     @media (min-width: 640px) {
       background-image: none;
       height: auto;

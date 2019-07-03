@@ -1,249 +1,97 @@
 <template>
   <DefaultLayout>
-    <b-carousel
-      id="carousel-1"
-      :interval="5000"
-      controls
-      indicators
-      style="text-shadow: 1px 1px 2px #333;"
-    >
-      <b-carousel-slide>
-        <h1>Responsive Design</h1>
-        <g-image
-          class="carousel-image"
-          slot="img"
-          src="../../uploads/responsive.svg"
-          alt="Responsive Design"
-        />
-      </b-carousel-slide>
+    <HeroSection section-height="650px">
+      <template v-slot:background>
+        <g-image src="~/assets/images/denatl.jpg" alt="" immediate />
+      </template>
+      <template v-slot:body>
+        <b-container>
+          <b-row>
+            <b-col cols="9">
+              <h1 class="text-dark mb-4">A better life starts with a beautiful smile</h1>
+              <p class="text-dark mb-4">Care in an environment of excellence</p>
+              <b-button @click="" variant="secondary" class="mt-4 py-3 px-5">
+                Book an appointment now
+              </b-button>
+            </b-col>
+          </b-row>
+        </b-container>
+      </template>
+    </HeroSection>
 
-      <b-carousel-slide>
-        <h1>Code Review</h1>
-        <g-image
-          class="carousel-image"
-          slot="img"
-          src="../../uploads/code-review.svg"
-          alt="Code Review"
-        />
-      </b-carousel-slide>
-
-      <b-carousel-slide>
-        <h1>Adjustments</h1>
-        <g-image
-          class="carousel-image"
-          slot="img"
-          src="../../uploads/adjustments.svg"
-          alt="Adjustments"
-        />
-      </b-carousel-slide>
-
-      <b-carousel-slide>
-        <h1>Profile</h1>
-        <g-image class="carousel-image" slot="img" src="../../uploads/profile.svg" alt="Profile" />
-      </b-carousel-slide>
-
-      <b-carousel-slide>
-        <h1>App</h1>
-        <g-image class="carousel-image" slot="img" src="../../uploads/app.svg" alt="App" />
-      </b-carousel-slide>
-
-      <b-carousel-slide>
-        <h1>Messages</h1>
-        <g-image class="carousel-image" slot="img" src="../../uploads/text.svg" alt="Messages" />
-      </b-carousel-slide>
-    </b-carousel>
-
-    <section id="about">
-      <h3 class="mt-5 mb-4">About</h3>
-      <p>
-        This is a JAMstack boilerplate using Gridsome that comes with many features out of the box.
-        It utilizes Bootstrap that is well known for powerful styling and layout. Ready to be
-        deployed, automagically imports data to CMS and sets up your /admin page for easy access to
-        edit your content.
-      </p>
-      <p>
-        It is designed to use Netlify and Github which all have very fair free tier to their
-        services, so you wont need to pay for monthly subscriptions and costly hosting fees.
-      </p>
-    </section>
-
-    <section id="layout">
-      <h3 class="mt-5 pt-mb-4">Layouts</h3>
-      <g-link class="nav--link" to="/agency">Agency</g-link>
-    </section>
-
-    <section id="features">
-      <h3 class="mt-5 pt-mb-4">Features</h3>
-      <p>This starter project includes some of the latest powerful technologies.</p>
-
-      <b-card-group deck>
-        <b-card img-src="../../uploads/code-review.svg" img-alt="Built with" img-top>
-          <b-card-title>Built with</b-card-title>
-          <b-list-group flush>
-            <b-list-group-item
-              href="https://gridsome.org/"
-              v-b-tooltip.hover.right
-              title="A framework for JAMstack websites & PWAs based on Vue.js"
-            >
-              Gridsome
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://graphql.org/"
-              v-b-tooltip.hover.right
-              title="A powerful data query language for APIs that uses your existing data"
-            >
-              GraphQL
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://vuejs.org/"
-              v-b-tooltip.hover.right
-              title="A JavaScript framework for building user interfaces and single-page applications"
-            >
-              Vue.js
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://vuex.vuejs.org/"
-              v-b-tooltip.hover.right
-              title="A state management pattern & library for Vue.js applications"
-            >
-              Vuex
-            </b-list-group-item>
-          </b-list-group>
-        </b-card>
-
-        <b-card img-src="../../uploads/profile.svg" img-alt="Authoring" img-top>
-          <b-card-title>Authoring</b-card-title>
-          <b-list-group flush>
-            <b-list-group-item
-              href="https://www.markdownguide.org/"
-              v-b-tooltip.hover.right
-              title="A lightweight markup language with plain text formatting syntax that can be converted to many output formats"
-            >
-              Markdown
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://www.netlifycms.org/"
-              v-b-tooltip.hover.right
-              title="A CMS that gives non-technical users a simple way to edit and add content to any site built with a static site generator"
-            >
-              Netlify CMS
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://www.netlify.com/docs/identity/"
-              v-b-tooltip.hover.right
-              title="A full suite of authentication functionality, backed by the GoTrue API"
-            >
-              Netlify Identity
-            </b-list-group-item>
-          </b-list-group>
-        </b-card>
-
-        <b-card img-src="../../uploads/responsive.svg" img-alt="Responsive Design" img-top>
-          <b-card-title>Styling</b-card-title>
-          <b-list-group flush>
-            <b-list-group-item
-              href="https://sass-lang.com/"
-              v-b-tooltip.hover.right
-              title="A mature, stable, and powerful professional grade CSS extension language"
-            >
-              Sass
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://bootstrap-vue.js.org/"
-              v-b-tooltip.hover.right
-              title="One of the most comprehensive implementations of the Bootstrap 4.3 component and grid system for Vue.js"
-            >
-              Bootstrap Vue
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://gridsome.org/plugins/@gridsome/plugin-critical"
-              v-b-tooltip.hover.right
-              title="Extracts & inlines critical-path (above-the-fold) CSS"
-            >
-              Critical path CSS extraction
-            </b-list-group-item>
-          </b-list-group>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck>
-        <b-card img-src="../../uploads/adjustments.svg" img-alt="Data" img-left>
-          <b-card-title>Data</b-card-title>
-          <b-list-group flush>
-            <b-list-group-item
-              href="https://www.netlify.com/docs/form-handling/"
-              v-b-tooltip.hover.right
-              title="Form submission handling provided by Netlify"
-            >
-              Netlify Forms
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://analytics.google.com/analytics/web/"
-              v-b-tooltip.hover.right
-              title="A web analytics service offered by Google that tracks and reports website traffic"
-            >
-              Google Analytics
-            </b-list-group-item>
-            <b-list-group-item
-              href="https://gridsome.org/plugins/@gridsome/plugin-sitemap"
-              v-b-tooltip.hover.right
-              title="Automatic sitemap generation for Gridsome sites"
-            >
-              Sitemap generator
-            </b-list-group-item>
-          </b-list-group>
-        </b-card>
-      </b-card-group>
+    <section class="banner">
+      <b-container fluid>
+        <b-row class="p-5">
+          <b-col class="text-center">
+            <SVGMap class="svg-icon" alt="Location" />
+            <h2 class="py-2 text-light">Find Location</h2>
+            <p class="text-light">Search location on Google Map</p>
+          </b-col>
+          <b-col class="text-center">
+            <SVGUser class="svg-icon" alt="Patients" />
+            <h2 class="py-2 text-light">New Patient</h2>
+            <p class="text-light">Fill up all details in form to get started</p>
+          </b-col>
+          <b-col class="text-center">
+            <SVGMail class="svg-icon" alt="Queries" />
+            <h2 class="py-2 text-light">Queries</h2>
+            <p class="text-light">Send us your questions through mail</p>
+          </b-col>
+        </b-row>
+      </b-container>
     </section>
   </DefaultLayout>
 </template>
 
 <script>
-// import SVGPolygon from '../components/SVGPolygon.vue';
+import HeroSection from '../components/HeroSection.vue';
+import SVGMap from '~/assets/images/map.svg';
+import SVGUser from '~/assets/images/user.svg';
+import SVGMail from '~/assets/images/mail.svg';
 
 export default {
   components: {
-    // SVGPolygon,
+    HeroSection,
+    SVGMap,
+    SVGUser,
+    SVGMail,
   },
   metaInfo: {
-    title: 'Gridsome starter bootstrap',
+    title: 'Dental Care Arvada',
+  },
+  mounted() {
+    document.querySelectorAll('.svg-icon').forEach(el => {
+      el.setAttribute('viewBox', '0 0 24 24');
+    });
   },
 };
 </script>
 
 <style lang="scss" scoped>
-#about {
-  margin-bottom: 8rem;
-  padding-bottom: 4rem;
+.container-fluid {
+  background-color: var(--primary);
+  max-width: 1240px;
 }
 
-.card {
-  box-shadow: 2px 3px 4px #888;
-  transition: all 0.2s ease-in-out;
+.banner {
+  position: relative;
+  top: -4rem;
 
-  &:hover {
-    box-shadow: 4px 6px 8px #aaa;
-    transform: scale(1.02);
+  @media (max-width: 1024px) {
+    top: 0;
+  }
+
+  p {
+    font-size: 100%;
   }
 }
 
-.card-deck {
-  margin-bottom: 2rem;
-}
-
-.card-img-top {
-  padding: 1rem;
-}
-
-.card-img-left {
-  background-size: cover;
-  height: 100%;
-  padding: 1rem;
-  width: 50%;
-}
-
-.carousel-image {
-  height: 75vh;
-  width: 100%;
+.svg-icon {
+  color: #f8f9fa;
+  width: 48px;
+  height: 48px;
+  path {
+    stroke: currentColor;
+  }
 }
 </style>

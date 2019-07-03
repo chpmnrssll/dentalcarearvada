@@ -12,9 +12,11 @@ export default function(Vue, { head }) {
 
   // Preload local fonts
   const preloadFonts = [
-    'nunito-v10-latin-regular.woff2',
-    'nunito-v10-latin-600.woff2',
-    'nunito-v10-latin-700.woff2',
+    'OpenSans-Bold.woff2',
+    'OpenSans-ExtraBold.woff2',
+    'OpenSans-Light.woff2',
+    'OpenSans-Regular.woff2',
+    'OpenSans-SemiBold.woff2',
   ];
   preloadFonts.forEach(font => {
     head.link.push({
