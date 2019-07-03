@@ -88,6 +88,12 @@ export default {
     },
   },
   mounted() {
+    // remove duplicate #nav_collapse in production env
+    const navCollapses = this.$el.querySelectorAll('#nav_collapse');
+    if (navCollapses.length > 1) {
+      navCollapses[navCollapses.length - 1].remove();
+    }
+
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener('scroll', this.onScroll, { passive: true });
   },
