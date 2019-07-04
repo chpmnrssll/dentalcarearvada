@@ -26,8 +26,8 @@ export default {
   },
   computed: {
     fixedClass() {
-      const addClass = 'position-absolute p-0 FullScreenHero-body';
-      return this.fixed ? `${this.className} ${addClass}` : `${this.className} FullScreenHero-body`;
+      const addClass = 'position-absolute p-0 HeroSection-body';
+      return this.fixed ? `${this.className} ${addClass}` : `${this.className} HeroSection-body`;
     },
   },
   mounted() {
@@ -35,8 +35,8 @@ export default {
     window.requestAnimationFrame(() => {
       const sectionHeight = parseFloat(this.sectionHeight, 10);
 
-      // set this sections' height to match .FullScreenHero-body
-      const body = this.$el.querySelector('.FullScreenHero-body div');
+      // set this sections' height to match .HeroSection-body
+      const body = this.$el.querySelector('.HeroSection-body div');
       const bodyHeight = parseInt(window.getComputedStyle(body).height, 10);
       if (sectionHeight && sectionHeight > bodyHeight) {
         this.$el.style.height = this.sectionHeight;
@@ -74,7 +74,6 @@ section {
   width: 100%;
 }
 .g-image {
-  background-color: #000000;
   left: 0;
   height: 100%;
   object-fit: cover;

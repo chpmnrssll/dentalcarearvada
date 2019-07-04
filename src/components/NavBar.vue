@@ -6,13 +6,13 @@
     toggleable="lg"
   >
     <b-container fluid>
-      <b-navbar-brand class="mx-0">
+      <b-navbar-brand class="m-4 p-0 mx-lg-0">
         <g-link to="/">
           <g-image alt="logo" src="~/assets/images/dental-logo.png" immediate />
         </g-link>
       </b-navbar-brand>
 
-      <b-navbar-toggle class="mx-4" target="nav_collapse">
+      <b-navbar-toggle class="m-4 p-0" target="nav_collapse">
         <button
           class="hamburger hamburger--collapse"
           type="button"

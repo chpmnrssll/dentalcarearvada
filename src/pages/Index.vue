@@ -5,7 +5,7 @@
         <g-image src="~/assets/images/denatl.jpg" alt="" immediate />
       </template>
       <template v-slot:body>
-        <b-container>
+        <b-container class="m-4 p-0 m-lg-auto px-lg-3">
           <b-row>
             <b-col cols="9">
               <h1 class="text-dark mb-4">A better life starts with a beautiful smile</h1>
@@ -69,11 +69,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container-fluid {
-  background-color: var(--primary);
-  max-width: 1240px;
-}
-
 .banner {
   position: relative;
   top: -4rem;
@@ -85,6 +80,11 @@ export default {
   p {
     font-size: 100%;
   }
+}
+
+.container-fluid {
+  background-color: var(--primary);
+  max-width: 1240px;
 }
 
 .svg-icon {
