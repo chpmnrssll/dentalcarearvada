@@ -1,7 +1,5 @@
 <template>
-  <DefaultLayout>
-    <div id="nc-root">Netlify CMS</div>
-  </DefaultLayout>
+  <DefaultLayout id="nc-root" />
 </template>
 
 <script>
