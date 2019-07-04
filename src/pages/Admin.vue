@@ -9,6 +9,7 @@ export default {
   name: 'Admin',
   // meta: [{ requiresAuth: true }],
   mounted() {
+    window.CMS();
     window.CMS.init({
       config: {
         backend: {

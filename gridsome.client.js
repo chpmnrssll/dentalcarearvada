@@ -40,7 +40,7 @@ export default function(Vue, options, context) {
     window.CMS_MANUAL_INIT = true;
     /* eslint no-unused-vars: "off" */
     window.CMS = () => import('netlify-cms');
-    window.CMS();
+    // window.CMS();
 
     context.router.beforeEach((to, from, next) => {
       if (
