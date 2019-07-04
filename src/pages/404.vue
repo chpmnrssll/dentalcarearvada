@@ -1,9 +1,9 @@
 <template>
-  <Layout>
+  <DefaultLayout>
     <div class="d-flex">
       <img class="" src="../assets/images/404.svg" alt="404" />
     </div>
-  </Layout>
+  </DefaultLayout>
 </template>
 
 <style scoped lang="scss">

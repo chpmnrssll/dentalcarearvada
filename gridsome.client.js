@@ -1,5 +1,3 @@
-/* eslint no-param-reassign: "error" */
-
 import Vuex from 'vuex';
 import netlifyIdentity from 'netlify-identity-widget';
 import user from './src/store/modules/user';
@@ -20,8 +18,10 @@ export default function(Vue, options, context) {
     },
   });
 
+  /* eslint no-param-reassign: "off" */
   context.appOptions.store = store;
   context.appOptions.netlifyIdentity = netlifyIdentity;
+  // context.appOptions.CMS = CMS;
 
   // Wrap the router-view with a transition tag.
   // You could do the same with keep-alive etc.
@@ -34,7 +34,14 @@ export default function(Vue, options, context) {
     );
 
   if (process.isClient) {
+    // This global flag enables manual initialization.
+    window.CMS_MANUAL_INIT = true;
     window.netlifyIdentity = netlifyIdentity;
+    /* eslint no-unused-vars: "off" */
+    // const CMS = () => import('netlify-cms');
+    window.CMS = () => import('netlify-cms');
+    window.CMS();
+
     context.router.beforeEach((to, from, next) => {
       if (
         to.matched.some(record => record.meta.requiresAuth) &&

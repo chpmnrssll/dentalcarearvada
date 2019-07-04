@@ -8,6 +8,12 @@
 export default {
   name: 'Admin',
   // meta: [{ requiresAuth: true }],
+  mounted() {
+    window.CMS.init();
+    // console.log(this.$root.$options.CMS);
+    // this.$root.$options.CMS.init();
+    // CMS.init();
+  },
 };
 </script>
 

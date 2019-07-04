@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteName: 'Gridsome starter bootstrap',
   siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
@@ -50,6 +52,12 @@ module.exports = {
       },
     },
   ],
+  configureWebpack: {
+    // merged with the internal config
+    output: {
+      chunkFilename: '[name].bundle.js',
+    },
+  },
   chainWebpack: config => {
     config.module
       .rule('vue')
