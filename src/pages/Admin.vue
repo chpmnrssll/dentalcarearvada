@@ -19,6 +19,7 @@ export default {
         load_config_file: false,
         media_folder: '/uploads',
         public_folder: '/uploads',
+        site_url: window.location.hostname,
         collections: [
           {
             label: 'Posts',
@@ -38,11 +39,12 @@ export default {
         ],
       },
     });
-    // console.log(this.$root.$options.CMS);
-    // this.$root.$options.CMS.init();
-    // CMS.init();
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#nc-root {
+  margin-top: 6rem;
+}
+</style>

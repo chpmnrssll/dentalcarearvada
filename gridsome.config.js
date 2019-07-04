@@ -1,9 +1,9 @@
-const path = require('path');
+// const path = require('path');
 
 module.exports = {
-  siteName: 'Gridsome starter bootstrap',
-  siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
-  siteUrl: 'https://gridsome-boilerplate.netlify.com/',
+  siteName: 'Dental Care Arvada',
+  siteDescription: 'Dental Care Arvada Online',
+  siteUrl: 'https://dentalcarearvada.netlify.com/',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -17,13 +17,13 @@ module.exports = {
         },
       },
     },
-    {
-      use: 'gridsome-plugin-netlify-cms',
-      options: {
-        publicPath: '/admin',
-        modulePath: 'src/admin/index.js',
-      },
-    },
+    // {
+    //   use: 'gridsome-plugin-netlify-cms',
+    //   options: {
+    //     publicPath: '/admin',
+    //     modulePath: 'src/admin/index.js',
+    //   },
+    // },
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
@@ -52,12 +52,6 @@ module.exports = {
       },
     },
   ],
-  configureWebpack: {
-    // merged with the internal config
-    output: {
-      chunkFilename: '[name].bundle.js',
-    },
-  },
   chainWebpack: config => {
     config.module
       .rule('vue')
@@ -79,6 +73,7 @@ module.exports = {
 
         return options;
       });
+
     const svgRule = config.module.rule('svg');
     svgRule.uses.clear();
     svgRule.use('vue-svg-loader').loader('vue-svg-loader');
