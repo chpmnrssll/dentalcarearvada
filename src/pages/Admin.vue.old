@@ -1,13 +1,13 @@
 <template>
-  <Layout>
+  <DefaultLayout>
     <div id="nc-root">Netlify CMS</div>
-  </Layout>
+  </DefaultLayout>
 </template>
 
 <script>
 export default {
   name: 'Admin',
-  meta: [{ requiresAuth: true }],
+  // meta: [{ requiresAuth: true }],
 };
 </script>
 

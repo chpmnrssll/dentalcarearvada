@@ -1,5 +1,3 @@
-/* eslint no-param-reassign: "error" */
-
 module.exports = {
   siteName: 'Gridsome starter bootstrap',
   siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
@@ -17,12 +15,13 @@ module.exports = {
         },
       },
     },
-    // {
-    //   use: `gridsome-plugin-netlify-cms`,
-    //   options: {
-    //     publicPath: `/admin`,
-    //   },
-    // },
+    {
+      use: 'gridsome-plugin-netlify-cms',
+      options: {
+        publicPath: '/admin',
+        modulePath: 'src/admin/index.js',
+      },
+    },
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
@@ -57,6 +56,7 @@ module.exports = {
       .use('vue-loader')
       .loader('vue-loader')
       .tap(options => {
+        /* eslint no-param-reassign: "error" */
         options.transformAssetUrls = {
           img: 'src',
           image: 'xlink:href',
