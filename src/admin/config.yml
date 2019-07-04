@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: chpmnrssll/gridsome-boilerplate
+  repo: 'chpmnrssll/dentalcarearvada'
   squash_merges: true
 
 media_folder: "/uploads"
