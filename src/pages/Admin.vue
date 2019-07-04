@@ -1,5 +1,5 @@
 <template>
-  <DefaultLayout id="nc-root" />
+  <div id="nc-root" />
 </template>
 
 <script>
