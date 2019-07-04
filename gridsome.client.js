@@ -39,8 +39,8 @@ export default function(Vue, options, context) {
     // This global flag enables manual initialization
     window.CMS_MANUAL_INIT = true;
     /* eslint no-unused-vars: "off" */
-    window.CMS = () => import('netlify-cms');
-    // window.CMS();
+    const CMS = () => import('netlify-cms');
+    window.CMS = CMS();
 
     context.router.beforeEach((to, from, next) => {
       if (
@@ -63,6 +63,7 @@ export default function(Vue, options, context) {
         refresh_token: userData.token.refresh_token,
         token_type: userData.token.token_type,
       });
+      console.log(userData);
       document.location.href = `${window.location.hostname}/admin`;
     };
 
