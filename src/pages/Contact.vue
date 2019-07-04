@@ -4,7 +4,7 @@
     <div>
       <img
         class="contact-image mb-4"
-        src="../../static/uploadedImages/email.svg"
+        src="../../static/assets/uploadedImages/email.svg"
         alt="contact-image"
       />
       <b-form

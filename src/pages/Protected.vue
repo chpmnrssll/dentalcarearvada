@@ -3,7 +3,7 @@
     <h1 class="mb-4">Protected Content</h1>
     <img
       class="lock-image"
-      src="../../static/uploadedImages/key-with-lock-square.svg"
+      src="../../static/assets/uploadedImages/key-with-lock-square.svg"
       alt="lock-image"
     />
 
