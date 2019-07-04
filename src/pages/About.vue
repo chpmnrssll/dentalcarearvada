@@ -1,11 +1,7 @@
 <template>
   <Layout>
     <h1 class="mb-4">About</h1>
-    <img
-      class="about-image"
-      src="../../static/assets/uploadedImages/profile.svg"
-      alt="about-image"
-    />
+    <g-image class="about-image" src="~/assets/images/profile.svg" alt="about-image" />
 
     <p>
       Lorem ipsum dolor sit amet consectetur adipiscing elit, platea elementum mus lectus molestie
