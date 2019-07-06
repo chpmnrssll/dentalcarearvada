@@ -20,3 +20,4 @@ collections:
       - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Show in site navigation', name: 'showNavLink', widget: 'boolean', default: false }
