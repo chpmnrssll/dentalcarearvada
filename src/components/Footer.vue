@@ -1,7 +1,7 @@
 <template>
   <footer class="page-footer font-small teal py-4">
     <div class="footer-copyright text-center">
-      <g-link class="nav--link" to="/admin">Netlify CMS</g-link>
+      <a class="nav--link" href="/admin">Netlify CMS</a>
     </div>
   </footer>
 </template>
