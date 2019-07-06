@@ -35,13 +35,6 @@ export default function(Vue, options, context) {
   if (process.isClient) {
     window.netlifyIdentity = netlifyIdentity;
 
-    // Dynamic import, attach to window, and start netlify-cms
-    // This global flag enables manual initialization
-    window.CMS_MANUAL_INIT = true;
-    /* eslint no-unused-vars: "off" */
-    const CMS = () => import('netlify-cms');
-    window.CMS = CMS();
-
     context.router.beforeEach((to, from, next) => {
       if (
         to.matched.some(record => record.meta.requiresAuth) &&
@@ -51,6 +44,15 @@ export default function(Vue, options, context) {
         next(from);
       } else {
         next();
+      }
+    });
+    context.router.afterEach(to => {
+      if (to.matched.some(record => record.path.includes('admin'))) {
+        // Dynamic import, attach to window, and start netlify-cms
+        // This global flag enables manual initialization
+        window.CMS_MANUAL_INIT = true;
+        const CMS = () => import('netlify-cms');
+        window.CMS = CMS();
       }
     });
 
