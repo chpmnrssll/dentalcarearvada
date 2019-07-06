@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: 'https://github.com/chpmnrssll/dentalcarearvada'
+  repo: 'chpmnrssll/dentalcarearvada'
   squash_merges: true
 
 media_folder: '/static/assets/uploadedImages'
