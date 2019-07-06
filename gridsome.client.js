@@ -46,15 +46,15 @@ export default function(Vue, options, context) {
         next();
       }
     });
-    context.router.afterEach(to => {
-      if (to.matched.some(record => record.path.includes('admin'))) {
-        // Dynamic import, attach to window, and start netlify-cms
-        // This global flag enables manual initialization
-        window.CMS_MANUAL_INIT = true;
-        const CMS = () => import('netlify-cms');
-        window.CMS = CMS();
-      }
-    });
+    // context.router.afterEach(to => {
+    //   if (to.matched.some(record => record.path.includes('admin'))) {
+    //     // Dynamic import, attach to window, and start netlify-cms
+    //     // This global flag enables manual initialization
+    //     window.CMS_MANUAL_INIT = true;
+    //     const CMS = () => import('netlify-cms');
+    //     window.CMS = CMS();
+    //   }
+    // });
 
     const loginSuccessHandler = userData => {
       store.dispatch('user/updateUser', {
