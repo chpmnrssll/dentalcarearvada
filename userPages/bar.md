@@ -1,8 +1,8 @@
 ---
-title: Foo
-excerpt: bar
+title: Bar
+excerpt: foo
 date: 2019-07-05T19:44:09.211Z
-author: foobar
+author: barfoo
 image: "/static/assets/uploadedImages/jamstack-full-logo.svg"
 showNavLink: true
 ---

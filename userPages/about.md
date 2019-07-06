@@ -1,9 +1,8 @@
 ---
 title: About
 excerpt: About Our Practice
-date: 2019-07-04 17:00:00 +0000
+date: 2019-07-04T19:44:09.211Z
 author: Russell Chapman
-image: "/static/assets/uploadedImages/cupcake.svg"
+image: /assets/uploadedImages/cupcake.svg
 ---
-
-About Our Practice
+About Our Practice user page.

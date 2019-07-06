@@ -28,9 +28,12 @@
       <b-collapse is-nav id="nav_collapse" v-model="showCollapse" class="nav-collapse">
         <b-navbar-nav class="ml-auto px-4">
           <b-nav-item>
-            <g-link class="" to="/agency">Home</g-link>
+            <g-link class="" to="/">Home</g-link>
           </b-nav-item>
-          <b-nav-item>
+          <b-nav-item v-for="(userPage, index) in userPages" :key="index">
+            <g-link class="" :to="userPage.path">{{ userPage.title }}</g-link>
+          </b-nav-item>
+          <!-- <b-nav-item>
             <g-link class="" to="/agency/practice">Our Practice</g-link>
           </b-nav-item>
           <b-nav-item>
@@ -47,7 +50,7 @@
           </b-nav-item>
           <b-nav-item>
             <g-link class="" to="/agency/forms">Forms</g-link>
-          </b-nav-item>
+          </b-nav-item> -->
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -55,9 +58,15 @@
 </template>
 
 <static-query>
-query {
-  metaData {
-    siteName
+query UserPages {
+  userPages: allUserPage(filter: { showNavLink: { eq: true } }) {
+    edges {
+      node {
+        path
+        showNavLink
+        title
+      }
+    }
   }
 }
 </static-query>
@@ -81,6 +90,9 @@ export default {
     ...mapGetters('user', {
       isLoggedIn: 'isLoggedIn',
     }),
+    userPages() {
+      return this.$static.userPages.edges.map(edge => edge.node);
+    },
   },
   watch: {
     showCollapse(val) {
