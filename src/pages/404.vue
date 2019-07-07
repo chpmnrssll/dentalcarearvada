@@ -2,6 +2,7 @@
   <DefaultLayout>
     <div class="d-flex">
       <img class="" src="../assets/images/404.svg" alt="404" />
+      <h1>404</h1>
     </div>
   </DefaultLayout>
 </template>

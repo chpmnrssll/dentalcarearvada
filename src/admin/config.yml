@@ -1,23 +1,41 @@
 backend:
-  name: github
-  repo: 'chpmnrssll/dentalcarearvada'
+  name: "github"
+  repo: "chpmnrssll/dentalcarearvada"
   squash_merges: true
 
-media_folder: '/assets/uploadedImages'
-public_folder: '/static/assets/uploadedImages'
-
+media_folder: "/static/assets/uploadedImages"
+public_folder: "/assets/uploadedImages"
 
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    folder: 'userPages'
+  - label: "Pages"
+    name: "pages"
+    folder: "/userPages"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Author', name: 'author', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Show in site navigation', name: 'showNavLink', widget: 'boolean', default: false }
+      - { label: "Show in site navigation", name: "showNavLink", widget: "boolean", default: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Excerpt", name: "excerpt", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Default Page"
+    name: "defaultPage"
+    files:
+      - label: "Home page"
+        name: "homePage"
+        file: "/userPages/home.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "text" }
+          - { label: "Sub Heading", name: "subHeading", widget: "text" }
+          - { label: "buttonText", name: "buttonText", widget: "text" }
+          - label: "Banner Links"
+            name: "bannerLinks"
+            widget: "object"
+            fields:
+              - { label: "Icon", name: "icon", widget: "image" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }

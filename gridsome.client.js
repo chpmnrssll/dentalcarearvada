@@ -5,10 +5,10 @@ import user from './src/store/modules/user';
 
 export default function(Vue, options, context) {
   // FIXME: hack to add route meta data
-  ['protected'].forEach(routeName => {
-    const protectedRoute = context.router.options.routes.find(route => route.name === routeName);
-    protectedRoute.meta.requiresAuth = true;
-  });
+  // ['protected'].forEach(routeName => {
+  //   const protectedRoute = context.router.options.routes.find(route => route.name === routeName);
+  //   protectedRoute.meta.requiresAuth = true;
+  // });
 
   Vue.use(Vuex);
   const store = new Vuex.Store({
@@ -32,48 +32,48 @@ export default function(Vue, options, context) {
       [h('router-view', { attrs: { id: 'app' } })],
     );
 
-  if (process.isClient) {
-    window.netlifyIdentity = netlifyIdentity;
-
-    context.router.beforeEach((to, from, next) => {
-      if (
-        to.matched.some(record => record.meta.requiresAuth) &&
-        !store.getters['user/isLoggedIn']
-      ) {
-        window.netlifyIdentity.open('login');
-        next(from);
-      } else {
-        next();
-      }
-    });
-    // context.router.afterEach(to => {
-    //   if (to.matched.some(record => record.path.includes('admin'))) {
-    //     // Dynamic import, attach to window, and start netlify-cms
-    //     // This global flag enables manual initialization
-    //     window.CMS_MANUAL_INIT = true;
-    //     const CMS = () => import('netlify-cms');
-    //     window.CMS = CMS();
-    //   }
-    // });
-
-    const loginSuccessHandler = userData => {
-      store.dispatch('user/updateUser', {
-        username: userData.user_metadata.full_name,
-        email: userData.email,
-        access_token: userData.token.access_token,
-        expires_at: userData.token.expires_at,
-        refresh_token: userData.token.refresh_token,
-        token_type: userData.token.token_type,
-      });
-      console.log(userData);
-      document.location.href = `${window.location.hostname}/admin`;
-    };
-
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.init();
-      window.netlifyIdentity.on('login', loginSuccessHandler);
-      window.netlifyIdentity.on('signup', loginSuccessHandler);
-      window.netlifyIdentity.on('logout', () => store.dispatch('user/updateUser', null));
-    }
-  }
+  // if (process.isClient) {
+  //   window.netlifyIdentity = netlifyIdentity;
+  //
+  //   context.router.beforeEach((to, from, next) => {
+  //     if (
+  //       to.matched.some(record => record.meta.requiresAuth) &&
+  //       !store.getters['user/isLoggedIn']
+  //     ) {
+  //       window.netlifyIdentity.open('login');
+  //       next(from);
+  //     } else {
+  //       next();
+  //     }
+  //   });
+  //   // context.router.afterEach(to => {
+  //   //   if (to.matched.some(record => record.path.includes('admin'))) {
+  //   //     // Dynamic import, attach to window, and start netlify-cms
+  //   //     // This global flag enables manual initialization
+  //   //     window.CMS_MANUAL_INIT = true;
+  //   //     const CMS = () => import('netlify-cms');
+  //   //     window.CMS = CMS();
+  //   //   }
+  //   // });
+  //
+  //   const loginSuccessHandler = userData => {
+  //     store.dispatch('user/updateUser', {
+  //       username: userData.user_metadata.full_name,
+  //       email: userData.email,
+  //       access_token: userData.token.access_token,
+  //       expires_at: userData.token.expires_at,
+  //       refresh_token: userData.token.refresh_token,
+  //       token_type: userData.token.token_type,
+  //     });
+  //     console.log(userData);
+  //     document.location.href = `${window.location.hostname}/admin`;
+  //   };
+  //
+  //   if (window.netlifyIdentity) {
+  //     window.netlifyIdentity.init();
+  //     window.netlifyIdentity.on('login', loginSuccessHandler);
+  //     window.netlifyIdentity.on('signup', loginSuccessHandler);
+  //     window.netlifyIdentity.on('logout', () => store.dispatch('user/updateUser', null));
+  //   }
+  // }
 }
