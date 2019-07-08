@@ -15,7 +15,3 @@ bannerLinks:
     icon: /static/assets/images/mail.svg
     subHeading: Send us your questions through mail
     url: /
-  - heading: foo
-    icon: /assets/uploadedImages/app.svg
-    subHeading: foo stuff
-    url: /
