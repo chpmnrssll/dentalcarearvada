@@ -33,6 +33,9 @@
           <b-nav-item v-for="(userPage, index) in userPages" :key="index">
             <g-link class="" :to="userPage.path">{{ userPage.title }}</g-link>
           </b-nav-item>
+          <b-nav-item>
+            <g-link class="" to="/contact">Contact</g-link>
+          </b-nav-item>
           <!-- <b-nav-item>
             <g-link class="" to="/agency/practice">Our Practice</g-link>
           </b-nav-item>

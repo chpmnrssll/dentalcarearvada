@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <h1 class="mb-4">Success!</h1>
+    <h1 class="mb-4">Thank you!</h1>
     <g-image class="mail-image" src="~/assets/images/mail-sent.svg" alt="mail-image" />
-    <h3 class="mt-5 text-center">Your mail was successfully sent!</h3>
+    <h3 class="mt-5 text-center">Your message was successfully sent!</h3>
   </Layout>
 </template>
 

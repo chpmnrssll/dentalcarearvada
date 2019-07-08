@@ -1,9 +1,8 @@
 <template>
   <DefaultLayout>
-    <div class="d-flex">
+    <b-container class="d-flex justify-content-center align-items-center">
       <g-image class="" src="~/assets/images/404.svg" alt="404" />
-      <h1>404</h1>
-    </div>
+    </b-container>
   </DefaultLayout>
 </template>
 

@@ -1,13 +1,12 @@
 <template>
-  <Layout>
-    <h1 class="mb-4">Contact</h1>
-    <div>
-      <g-image class="contact-image mb-4" src="~/assets/images/email.svg" alt="contact-image" />
+  <DefaultLayout>
+    <!-- <h1 class="mb-4">Contact</h1> -->
+    <b-container fluid class="d-flex justify-content-center align-items-center">
       <b-form
         name="contact"
         method="post"
         @submit.prevent="handleSubmit"
-        action="/success/"
+        action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
@@ -48,8 +47,11 @@
 
         <b-button type="submit" variant="primary">Submit</b-button>
       </b-form>
+    </b-container>
+    <div>
+      <!-- <g-image class="contact-image mb-4" src="~/assets/images/email.svg" alt="contact-image" /> -->
     </div>
-  </Layout>
+  </DefaultLayout>
 </template>
 
 <script>
@@ -94,5 +96,13 @@ export default {
   margin: auto;
   width: 90%;
   max-width: 500px;
+}
+.container-fluid {
+  // background-color: var(--primary);
+  height: 100vh;
+  max-width: 680px;
+  form {
+    width: 100%;
+  }
 }
 </style>
