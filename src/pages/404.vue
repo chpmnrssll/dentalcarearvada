@@ -1,14 +1,14 @@
 <template>
   <DefaultLayout>
     <div class="d-flex">
-      <img class="" src="../assets/images/404.svg" alt="404" />
+      <g-image class="" src="~/assets/images/404.svg" alt="404" />
       <h1>404</h1>
     </div>
   </DefaultLayout>
 </template>
 
 <style scoped lang="scss">
-img {
+.g-image {
   width: 80%;
   margin: auto;
 

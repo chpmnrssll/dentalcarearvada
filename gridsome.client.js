@@ -1,5 +1,5 @@
 import Vuex from 'vuex';
-import netlifyIdentity from 'netlify-identity-widget';
+// import netlifyIdentity from 'netlify-identity-widget';
 import user from './src/store/modules/user';
 // import store from './src/store';
 
@@ -20,7 +20,7 @@ export default function(Vue, options, context) {
 
   /* eslint no-param-reassign: "off" */
   context.appOptions.store = store;
-  context.appOptions.netlifyIdentity = netlifyIdentity;
+  // context.appOptions.netlifyIdentity = netlifyIdentity;
 
   // Wrap the router-view with a transition tag.
   // You could do the same with keep-alive etc.

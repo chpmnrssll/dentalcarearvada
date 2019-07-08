@@ -20,22 +20,22 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - label: "Default Page"
-    name: "defaultPage"
+  - label: "Settings"
+    name: "settings"
     files:
       - label: "Home page"
         name: "homePage"
-        file: "/userPages/home.json"
+        file: "/userPages/home.yml"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Heading", name: "heading", widget: "text" }
-          - { label: "Sub Heading", name: "subHeading", widget: "text" }
-          - { label: "buttonText", name: "buttonText", widget: "text" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Sub Heading", name: "subHeading", widget: "string" }
+          - { label: "CTA Button Text", name: "buttonText", widget: "string" }
           - label: "Banner Links"
             name: "bannerLinks"
-            widget: "object"
+            widget: "list"
             fields:
               - { label: "Icon", name: "icon", widget: "image" }
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Sub Heading", name: "subHeading", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }

@@ -1,7 +1,7 @@
 <template>
   <footer class="page-footer font-small teal py-4">
-    <div class="footer-copyright text-center">
-      <a class="nav--link" href="/admin">Netlify CMS</a>
+    <div class="text-center">
+      <g-link to="/admin" target="_blank">Netlify CMS</g-link>
     </div>
   </footer>
 </template>
@@ -12,7 +12,7 @@ footer {
   margin-top: 6rem;
   background-color: #f5f5f5;
 
-  .nav--link {
+  a {
     color: #20c997;
   }
 }

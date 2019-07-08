@@ -3,54 +3,70 @@
 </template>
 
 <script>
-function initCMS() {
-  window.CMS.init({
-    config: {
-      backend: {
-        name: 'git-gateway',
-        repo: 'https://github.com/chpmnrssll/dentalcarearvada',
-        squash_merges: true,
-      },
-      load_config_file: false,
-      media_folder: '/static/assets/uploadedImages',
-      public_folder: '/assets/uploadedImages',
-      // site_url: window.location.hostname,
-      collections: [
-        {
-          label: 'Pages',
-          name: 'pages',
-          folder: 'userPages',
-          create: true,
-          slug: '{{slug}}',
-          fields: [
-            { label: 'Title', name: 'title', widget: 'string' },
-            { label: 'Excerpt', name: 'excerpt', widget: 'string' },
-            { label: 'Publish Date', name: 'date', widget: 'datetime' },
-            { label: 'Author', name: 'author', widget: 'string' },
-            { label: 'Image', name: 'image', widget: 'image' },
-            { label: 'Body', name: 'body', widget: 'markdown' },
-          ],
-        },
-      ],
-    },
-  });
-}
-
-function keepTrying() {
-  try {
-    initCMS();
-  } catch (e) {
-    console.error('DAMN');
-    setTimeout(keepTrying, 250);
-  }
-}
+// if (process.isClient) {
+//   // This global flag enables manual initialization.
+//   window.CMS_MANUAL_INIT = true;
+// }
+//
+// /* eslint no-unused-vars: "off" */
+// /* eslint import/first: "off" */
+// import CMS from 'netlify-cms';
+//
+// function initCMS() {
+//   if (!process.isClient) return;
+//   CMS.init({
+//     config: {
+//       backend: {
+//         name: 'git-gateway',
+//         repo: 'chpmnrssll/dentalcarearvada',
+//         squash_merges: true,
+//       },
+//       load_config_file: false,
+//       media_folder: '/static/assets/uploadedImages',
+//       public_folder: '/static/assets/uploadedImages',
+//       // site_url: window.location.hostname,
+//       collections: [
+//         {
+//           label: 'Pages',
+//           name: 'pages',
+//           folder: '/userPages',
+//           create: true,
+//           slug: '{{slug}}',
+//           fields: [
+//             {
+//               label: 'Show in site navigation',
+//               name: 'showNavLink',
+//               widget: 'boolean',
+//               default: false,
+//               required: false,
+//             },
+//             { label: 'Title', name: 'title', widget: 'string' },
+//             { label: 'Excerpt', name: 'excerpt', widget: 'string' },
+//             { label: 'Publish Date', name: 'date', widget: 'datetime' },
+//             { label: 'Author', name: 'author', widget: 'string' },
+//             { label: 'Image', name: 'image', widget: 'image' },
+//             { label: 'Body', name: 'body', widget: 'markdown' },
+//           ],
+//         },
+//       ],
+//     },
+//   });
+// }
+//
+// function keepTrying() {
+//   try {
+//     initCMS();
+//   } catch (e) {
+//     console.error('DAMN');
+//     // setTimeout(keepTrying, 250);
+//   }
+// }
 
 export default {
   name: 'Admin',
-  // meta: [{ requiresAuth: true }],
-  mounted() {
-    keepTrying();
-  },
+  // mounted() {
+  //   // initCMS();
+  // },
 };
 </script>
 
