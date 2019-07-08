@@ -1,17 +1,21 @@
-title: "Dental Care Arvada"
-heading: "A better life starts with a beautiful smile"
-subHeading: "Care in an environment of excellence"
-buttonText: "Book an appointment now"
+title: Dental Care Arvada
+heading: A better life starts with a beautiful smile
+subHeading: Care in an environment of excellence
+buttonText: Book an appointment now
 bannerLinks:
-  - icon: "/static/assets/images/map.svg"
-    heading: "Find Location"
-    subHeading: "Search location on Google Map"
-    url: "/"
-  - icon: "/static/assets/images/user.svg"
-    heading: "New Patient"
-    subHeading: "Fill up all details in form to get started"
-    url: "/"
-  - icon: "/static/assets/images/mail.svg"
-    heading: "Queries"
-    subHeading: "Send us your questions through mail"
-    url: "/"
+  - heading: Find Location
+    icon: /static/assets/images/map.svg
+    subHeading: Search location on Google Map
+    url: /
+  - heading: New Patient
+    icon: /static/assets/images/user.svg
+    subHeading: Fill up all details in form to get started
+    url: /
+  - heading: Queries
+    icon: /static/assets/images/mail.svg
+    subHeading: Send us your questions through mail
+    url: /
+  - heading: foo
+    icon: /assets/uploadedImages/app.svg
+    subHeading: foo stuff
+    url: /
