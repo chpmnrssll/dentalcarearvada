@@ -23,11 +23,7 @@
       <b-container fluid>
         <b-row class="p-5">
           <b-col class="text-center" v-for="bannerLink in bannerLinks" :key="bannerLink.heading">
-            <!-- <img
-              class="svg-icon"
-              :src="homeData.bannerLink.icon"
-              :alt="homeData.bannerLink.heading"
-            /> -->
+            <g-image class="svg-icon" :src="bannerLink.icon" :alt="bannerLink.heading" />
             <h2 class="py-2 text-light">{{ bannerLink.heading }}</h2>
             <p class="text-light">{{ bannerLink.subHeading }}</p>
           </b-col>
@@ -78,11 +74,18 @@ export default {
     bannerLinks() {
       return homeData.bannerLinks;
     },
+    SVGs() {
+      return this.bannerLinks.map(bannerLink => {
+        console.log(bannerLink.icon);
+        return import(bannerLink.icon);
+      });
+    },
   },
   metaInfo: {
     title: 'Dental Care Arvada',
   },
   mounted() {
+    console.log(this.SVGs);
     document.querySelectorAll('.svg-icon').forEach(el => {
       el.setAttribute('viewBox', '0 0 24 24');
     });

@@ -27,40 +27,40 @@
 
       <b-collapse is-nav id="nav_collapse" v-model="showCollapse" class="nav-collapse">
         <b-navbar-nav class="ml-auto px-4">
+          <!-- <b-nav-item v-for="(userPage, index) in userPages" :key="index">
+            <g-link class="" :to="userPage.path">{{ userPage.title }}</g-link>
+          </b-nav-item> -->
           <b-nav-item>
             <g-link class="" to="/">Home</g-link>
           </b-nav-item>
-          <b-nav-item v-for="(userPage, index) in userPages" :key="index">
-            <g-link class="" :to="userPage.path">{{ userPage.title }}</g-link>
+          <b-nav-item>
+            <g-link class="" to="/gallery">Our Practice</g-link>
+          </b-nav-item>
+          <b-nav-item>
+            <g-link class="" to="/reviews">Reviews</g-link>
+          </b-nav-item>
+          <b-nav-item>
+            <g-link class="" to="/appointments">Appointments</g-link>
+          </b-nav-item>
+          <b-nav-item>
+            <g-link class="" to="/directions">Directions & Map</g-link>
+          </b-nav-item>
+          <b-nav-item>
+            <g-link class="" to="/provider">Preferred Provider</g-link>
+          </b-nav-item>
+          <b-nav-item>
+            <g-link class="" to="/forms">Forms</g-link>
           </b-nav-item>
           <b-nav-item>
             <g-link class="" to="/contact">Contact</g-link>
           </b-nav-item>
-          <!-- <b-nav-item>
-            <g-link class="" to="/agency/practice">Our Practice</g-link>
-          </b-nav-item>
-          <b-nav-item>
-            <g-link class="" to="/agency/reviews">Reviews</g-link>
-          </b-nav-item>
-          <b-nav-item>
-            <g-link class="" to="/agency/appointments">Appointments</g-link>
-          </b-nav-item>
-          <b-nav-item>
-            <g-link class="" to="/agency/directions">Directions & Map</g-link>
-          </b-nav-item>
-          <b-nav-item>
-            <g-link class="" to="/agency/provider">Preferred Provider</g-link>
-          </b-nav-item>
-          <b-nav-item>
-            <g-link class="" to="/agency/forms">Forms</g-link>
-          </b-nav-item> -->
         </b-navbar-nav>
       </b-collapse>
     </b-container>
   </b-navbar>
 </template>
 
-<static-query>
+<!-- <static-query>
 query UserPages {
   userPages: allUserPage(filter: { showNavLink: { eq: true } }) {
     edges {
@@ -72,7 +72,7 @@ query UserPages {
     }
   }
 }
-</static-query>
+</static-query> -->
 
 <script>
 /* eslint no-param-reassign: "error" */

@@ -1,16 +1,16 @@
 <template>
   <DefaultLayout>
-    <h3 className="is-size-3">Our Practice</h3>
-    <section className="section">
+    <h3 class="mb-4">{{ galleryData.title }}</h3>
+    <section>
       <p>{{ galleryData.heading }}</p>
     </section>
-    <section className="section">
-      <figure className="has-text-centered">
-        <g-image :src="galleryData.images[0].src" :alt="galleryData.images[0].alt" />
-        <figcaption>{{ galleryData.images[0].alt }}</figcaption>
+    <section>
+      <figure class="text-center" v-for="image in galleryData.images">
+        <g-image :src="image.src" :alt="image.alt" />
+        <figcaption>{{ image.alt }}</figcaption>
       </figure>
     </section>
-    <section className="section">
+    <section class="section">
       <p>{{ galleryData.subHeading }}</p>
     </section>
   </DefaultLayout>
