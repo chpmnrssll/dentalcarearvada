@@ -9,7 +9,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Success',
+    title: 'Thanks',
   },
 };
 </script>
