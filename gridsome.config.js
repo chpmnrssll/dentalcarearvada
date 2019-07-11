@@ -5,6 +5,19 @@ module.exports = {
   siteDescription: 'Dental Care Arvada Online',
   siteUrl: 'https://dentalcarearvada.netlify.com/',
   plugins: [
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     path: 'reviews/**/*.md',
+    //     typeName: 'Review',
+    //     route: ':slug',
+    //     resolveAbsolutePaths: true,
+    //     remark: {
+    //       externalLinksTarget: '_blank',
+    //       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+    //     },
+    //   },
+    // },
     {
       use: '@gridsome/source-filesystem',
       options: {

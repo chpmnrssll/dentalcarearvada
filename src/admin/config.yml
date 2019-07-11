@@ -42,3 +42,15 @@ collections:
         fields:
           - { label: "Text", name: "text", widget: "string" }
           - { label: "Show Netlify-CMS Link", name: "netlifyCMSLink", widget: "boolean", default: true, required: false }
+  - label: "Reviews"
+    name: "reviews"
+    folder: "/reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Icon", name: "icon", widget: "select", default: "male", options: ["male", "female"]}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
