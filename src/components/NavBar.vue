@@ -45,7 +45,7 @@
             <g-link class="" to="/directions">Directions & Map</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="" to="/contact">Contact</g-link>
+            <g-link class="" to="/contact-form">Contact</g-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>

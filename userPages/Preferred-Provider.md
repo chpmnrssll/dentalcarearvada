@@ -1,5 +1,6 @@
 ---
 title: Preferred Provider
+path: "Insurance--Preferred-Dental-Provider"
 ---
 Dr. Waters proudly participates as a preferred provider for the following Dental Health Insurance Plans:
 

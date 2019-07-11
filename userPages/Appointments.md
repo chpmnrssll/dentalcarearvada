@@ -1,6 +1,7 @@
 ---
 showNavLink: true
 title: Appointments
+path: "/contacts"
 ---
 ## Hours
 
