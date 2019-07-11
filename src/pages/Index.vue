@@ -1,50 +1,52 @@
 <template>
   <DefaultLayout>
-    <HeroSection section-height="650px">
-      <template v-slot:background>
-        <g-image src="~/assets/images/denatl.jpg" alt="" immediate />
-      </template>
-      <template v-slot:body>
-        <b-container class="m-4 p-0 m-lg-auto px-lg-3">
-          <b-row>
-            <b-col cols="9">
-              <h1 class="text-dark mb-4">{{ homeData.heading }}</h1>
-              <p class="text-dark mb-4">{{ homeData.subHeading }}</p>
-              <b-button @click="" variant="secondary" class="mt-4 py-3 px-5">
-                {{ homeData.buttonText }}
-              </b-button>
+    <section class="pageContent">
+      <HeroSection section-height="650px">
+        <template v-slot:background>
+          <g-image src="~/assets/images/denatl.jpg" alt="" immediate />
+        </template>
+        <template v-slot:body>
+          <b-container class="m-4 p-0 m-lg-auto px-lg-3">
+            <b-row>
+              <b-col cols="9">
+                <h1 class="text-dark mb-4">{{ homeData.header }}</h1>
+                <p class="text-dark mb-4">{{ homeData.subHeader }}</p>
+                <b-button @click="" variant="secondary" class="mt-4 py-3 px-5">
+                  {{ homeData.buttonText }}
+                </b-button>
+              </b-col>
+            </b-row>
+          </b-container>
+        </template>
+      </HeroSection>
+
+      <section class="banner">
+        <b-container fluid>
+          <b-row class="p-5">
+            <b-col class="text-center" v-for="bannerLink in bannerLinks" :key="bannerLink.header">
+              <g-image class="svg-icon" :src="bannerLink.icon" :alt="bannerLink.header" />
+              <h2 class="py-2 text-light">{{ bannerLink.header }}</h2>
+              <p class="text-light">{{ bannerLink.subHeader }}</p>
             </b-col>
-          </b-row>
-        </b-container>
-      </template>
-    </HeroSection>
 
-    <section class="banner">
-      <b-container fluid>
-        <b-row class="p-5">
-          <b-col class="text-center" v-for="bannerLink in bannerLinks" :key="bannerLink.heading">
-            <g-image class="svg-icon" :src="bannerLink.icon" :alt="bannerLink.heading" />
-            <h2 class="py-2 text-light">{{ bannerLink.heading }}</h2>
-            <p class="text-light">{{ bannerLink.subHeading }}</p>
-          </b-col>
-
-          <!-- <b-col class="text-center">
+            <!-- <b-col class="text-center">
             <SVGMap class="svg-icon" alt="Location" />
             <h2 class="py-2 text-light">Find Location</h2>
             <p class="text-light">Search location on Google Map</p>
           </b-col>
           <b-col class="text-center">
-            <SVGUser class="svg-icon" alt="Patients" />
-            <h2 class="py-2 text-light">New Patient</h2>
-            <p class="text-light">Fill up all details in form to get started</p>
-          </b-col>
-          <b-col class="text-center">
-            <SVGMail class="svg-icon" alt="Queries" />
-            <h2 class="py-2 text-light">Queries</h2>
-            <p class="text-light">Send us your questions through mail</p>
-          </b-col> -->
-        </b-row>
-      </b-container>
+          <SVGUser class="svg-icon" alt="Patients" />
+          <h2 class="py-2 text-light">New Patient</h2>
+          <p class="text-light">Fill up all details in form to get started</p>
+        </b-col>
+        <b-col class="text-center">
+        <SVGMail class="svg-icon" alt="Queries" />
+        <h2 class="py-2 text-light">Queries</h2>
+        <p class="text-light">Send us your questions through mail</p>
+      </b-col> -->
+          </b-row>
+        </b-container>
+      </section>
     </section>
   </DefaultLayout>
 </template>
@@ -74,18 +76,18 @@ export default {
     bannerLinks() {
       return homeData.bannerLinks;
     },
-    SVGs() {
-      return this.bannerLinks.map(bannerLink => {
-        console.log(bannerLink.icon);
-        return import(bannerLink.icon);
-      });
-    },
+    // SVGs() {
+    //   return homeData.bannerLinks.map(bannerLink => {
+    //     console.log(bannerLink.icon);
+    //     return import(bannerLink.icon);
+    //   });
+    // },
   },
   metaInfo: {
     title: 'Dental Care Arvada',
   },
   mounted() {
-    console.log(this.SVGs);
+    // console.log(this.SVGs);
     document.querySelectorAll('.svg-icon').forEach(el => {
       el.setAttribute('viewBox', '0 0 24 24');
     });
@@ -109,7 +111,7 @@ export default {
 
 .container-fluid {
   background-color: var(--primary);
-  max-width: 1240px;
+  max-width: 1210px;
 }
 
 .svg-icon {

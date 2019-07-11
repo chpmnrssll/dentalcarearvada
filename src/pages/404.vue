@@ -1,8 +1,10 @@
 <template>
   <DefaultLayout>
-    <b-container class="d-flex justify-content-center align-items-center">
-      <g-image class="" src="~/assets/images/404.svg" alt="404" />
-    </b-container>
+    <section class="pageContent">
+      <b-container class="d-flex justify-content-center align-items-center">
+        <g-image class="" src="~/assets/images/404.svg" alt="404" />
+      </b-container>
+    </section>
   </DefaultLayout>
 </template>
 

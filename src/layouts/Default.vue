@@ -19,4 +19,17 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pageContent,
+.userPageContent {
+  flex: 1 0 auto;
+}
+.page-footer {
+  flex-shrink: 0;
+}
+</style>
