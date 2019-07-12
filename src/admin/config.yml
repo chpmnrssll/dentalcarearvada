@@ -50,7 +50,7 @@ collections:
     fields:
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Icon", name: "icon", widget: "select", default: "male", options: ["male", "female"]}
+      - {label: "Icon", name: "icon", widget: "image"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
