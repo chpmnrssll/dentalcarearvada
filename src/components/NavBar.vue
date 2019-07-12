@@ -8,7 +8,18 @@
     <b-container fluid>
       <b-navbar-brand class="m-4 p-0 mx-lg-0">
         <g-link to="/">
-          <g-image alt="logo" src="~/assets/images/dental-logo.png" immediate />
+          <b-row>
+            <b-col cols="2">
+              <g-image alt="logo" src="~/assets/images/dental-logo-graphic.png" immediate />
+            </b-col>
+            <b-col>
+              <span class="ml-3 logo-text-dental">Dental</span>
+              <span class="logo-text-care">Care</span>
+              <b-row>
+                <b-col class="ml-3 logo-text-arvada">Arvada</b-col>
+              </b-row>
+            </b-col>
+          </b-row>
         </g-link>
       </b-navbar-brand>
 
@@ -204,6 +215,31 @@ nav {
 
   .active--exact {
     font-weight: bold;
+  }
+}
+
+.navbar-brand {
+  a {
+    color: var(--dark);
+    font-size: 1.25rem;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--primary);
+    }
+  }
+  .logo-text-dental {
+    font-weight: 800;
+  }
+  .logo-text-care {
+    font-weight: 200;
+  }
+  .logo-text-arvada {
+    font-size: 0.75rem;
+    font-weight: 200;
+    margin-top: -0.25rem;
+    letter-spacing: 0.25rem;
+    text-align: center;
   }
 }
 </style>
