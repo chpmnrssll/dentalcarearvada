@@ -1,7 +1,7 @@
 ---
 author: Russell
 date: 2019-01-10T08:15:42.896Z
-icon: "assets/uploadedImages/user.svg"
+icon: "assets/uploadedImages/anonymous-avatar-2.png"
 location: Simla
 title: Netlify-CMS for Reviews
 ---
