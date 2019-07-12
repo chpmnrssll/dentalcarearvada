@@ -1,6 +1,5 @@
 <template>
   <DefaultLayout>
-    <!-- <h1 class="mb-4">Contact</h1> -->
     <b-container fluid class="d-flex justify-content-center align-items-center">
       <b-form
         name="contact"
@@ -10,47 +9,56 @@
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
+        <h1 class="text-center">Contact</h1>
         <input type="hidden" name="name" value="contact" />
         <p hidden>
           <label> Don’t fill this out: <input name="bot-field" /> </label>
         </p>
-        <b-form-group id="input-group-2" label="Name:" label-for="form-name">
+        <b-form-group id="input-group-2" label="" label-for="form-name">
           <b-form-input
             id="name"
             name="name"
             v-model="form.name"
             required
-            placeholder="Enter name"
+            placeholder="Your Name"
           />
         </b-form-group>
 
-        <b-form-group id="input-group-1" label="Email:" label-for="email">
+        <b-form-group id="input-group-1" label="" label-for="email">
           <b-form-input
             id="email"
             v-model="form.email"
             name="email"
             type="email"
             required
-            placeholder="Enter email"
+            placeholder="Your Email"
           />
         </b-form-group>
 
-        <b-form-group id="input-group-3" label="Message:" label-for="message">
+        <b-form-group id="input-group-4" label="" label-for="phone">
+          <b-form-input
+            id="phone"
+            v-model="form.phone"
+            name="phone"
+            type="phone"
+            required
+            placeholder="Your Phone Number"
+          />
+        </b-form-group>
+
+        <b-form-group id="input-group-3" label="" label-for="message">
           <b-form-textarea
             id="message"
             name="message"
             v-model="form.message"
             required
-            placeholder="Enter message"
+            placeholder="Your Message"
           />
         </b-form-group>
 
-        <b-button type="submit" variant="primary">Submit</b-button>
+        <b-button type="submit" variant="primary">Send Request</b-button>
       </b-form>
     </b-container>
-    <div>
-      <!-- <g-image class="contact-image mb-4" src="~/assets/images/email.svg" alt="contact-image" /> -->
-    </div>
   </DefaultLayout>
 </template>
 
@@ -91,18 +99,40 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.contact-image {
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 500px;
-}
 .container-fluid {
-  // background-color: var(--primary);
   height: 100vh;
-  max-width: 680px;
-  form {
-    width: 100%;
+  max-width: 800px;
+}
+main {
+  background-color: #f3f9f9;
+}
+form {
+  background-color: white;
+  box-shadow: 0px 0px 8px 2px rgba(157, 169, 169, 0.18);
+  margin: 6rem 0;
+  padding: 6rem;
+  width: 100%;
+}
+input,
+textarea {
+  background-color: #fafafa;
+  border-color: #eaeaea;
+  color: #666;
+  padding: 1rem;
+}
+h1 {
+  max-width: 100%;
+}
+button {
+  background-color: #303030;
+  border-color: #d3d3d3;
+  color: #d3d3d3;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: #d3d3d3;
+    border-color: #d3d3d3;
+    color: #303030;
   }
 }
 </style>
