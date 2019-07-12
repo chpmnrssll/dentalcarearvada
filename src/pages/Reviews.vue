@@ -3,7 +3,7 @@
     <section class="pageContent">
       <b-container fluid class="d-flex justify-content-center align-items-center">
         <b-row>
-          <b-col cols="4" offset="2" v-for="edge in $page.reviews.edges">
+          <b-col cols="4" offset="2" v-for="edge in $page.reviews.edges" :key="edge.node.path">
             <g-link :to="edge.node.path">
               <g-image :src="edge.node.icon" />
               <h2 class="mb-4">{{ edge.node.author }}, {{ edge.node.location }}</h2>

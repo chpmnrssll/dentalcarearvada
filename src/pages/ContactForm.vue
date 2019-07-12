@@ -14,7 +14,7 @@
         <p hidden>
           <label> Don’t fill this out: <input name="bot-field" /> </label>
         </p>
-        <b-form-group id="input-group-2" label="" label-for="form-name">
+        <b-form-group id="input-group-2">
           <b-form-input
             id="name"
             name="name"
@@ -24,7 +24,7 @@
           />
         </b-form-group>
 
-        <b-form-group id="input-group-1" label="" label-for="email">
+        <b-form-group id="input-group-1">
           <b-form-input
             id="email"
             v-model="form.email"
@@ -35,18 +35,17 @@
           />
         </b-form-group>
 
-        <b-form-group id="input-group-4" label="" label-for="phone">
+        <b-form-group id="input-group-4">
           <b-form-input
             id="phone"
             v-model="form.phone"
             name="phone"
-            type="phone"
             required
             placeholder="Your Phone Number"
           />
         </b-form-group>
 
-        <b-form-group id="input-group-3" label="" label-for="message">
+        <b-form-group id="input-group-3">
           <b-form-textarea
             id="message"
             name="message"
