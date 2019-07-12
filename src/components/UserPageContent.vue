@@ -1,5 +1,5 @@
 <template>
-  <div class="user-page-content" v-html="content" />
+  <b-container class="user-page-content" v-html="content" />
 </template>
 
 <script>

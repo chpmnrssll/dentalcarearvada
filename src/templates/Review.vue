@@ -1,9 +1,10 @@
 <template>
   <DefaultLayout>
-    <div class="reviewContent">
-      <h1 v-html="$page.review.title" class="mb-4" />
-      <ReviewContent class="mt-5" :content="$page.review.content" />
-    </div>
+    <section class="reviewContent">
+      <b-container fluid class="d-flex flex-column justify-content-center align-items-center">
+        <ReviewContent class="mt-5" :content="$page.review.content" />
+      </b-container>
+    </section>
   </DefaultLayout>
 </template>
 
@@ -35,4 +36,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container-fluid {
+  margin-top: 6rem;
+  max-width: 1210px;
+}
+</style>

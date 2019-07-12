@@ -1,5 +1,5 @@
 <template>
-  <div class="review-content" v-html="content" />
+  <b-container class="review-content" v-html="content" />
 </template>
 
 <script>

@@ -1,9 +1,10 @@
 <template>
   <DefaultLayout>
-    <div class="userPageContent">
-      <h1 v-html="$page.userPage.title" class="mb-4" />
-      <UserPageContent class="mt-5" :content="$page.userPage.content" />
-    </div>
+    <section class="userPageContent">
+      <b-container fluid class="d-flex justify-content-center align-items-center">
+        <UserPageContent class="mt-5" :content="$page.userPage.content" />
+      </b-container>
+    </section>
   </DefaultLayout>
 </template>
 
@@ -31,4 +32,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container-fluid {
+  margin-top: 6rem;
+  max-width: 1210px;
+}
+</style>
