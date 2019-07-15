@@ -23,27 +23,21 @@
       <section class="banner">
         <b-container fluid>
           <b-row class="p-5">
-            <b-col class="text-center" v-for="bannerLink in bannerLinks" :key="bannerLink.header">
-              <g-image class="svg-icon" :src="bannerLink.icon" :alt="bannerLink.header" />
-              <h2 class="py-2 text-light">{{ bannerLink.header }}</h2>
-              <p class="text-light">{{ bannerLink.subHeader }}</p>
+            <b-col class="text-center">
+              <SVGMap class="svg-icon" alt="Location" />
+              <h2 class="py-2 text-light">Find Location</h2>
+              <p class="text-light">Search location on Google Map</p>
             </b-col>
-
-            <!-- <b-col class="text-center">
-            <SVGMap class="svg-icon" alt="Location" />
-            <h2 class="py-2 text-light">Find Location</h2>
-            <p class="text-light">Search location on Google Map</p>
-          </b-col>
-          <b-col class="text-center">
-          <SVGUser class="svg-icon" alt="Patients" />
-          <h2 class="py-2 text-light">New Patient</h2>
-          <p class="text-light">Fill up all details in form to get started</p>
-        </b-col>
-        <b-col class="text-center">
-        <SVGMail class="svg-icon" alt="Queries" />
-        <h2 class="py-2 text-light">Queries</h2>
-        <p class="text-light">Send us your questions through mail</p>
-      </b-col> -->
+            <b-col class="text-center">
+              <SVGUser class="svg-icon" alt="Patients" />
+              <h2 class="py-2 text-light">New Patient</h2>
+              <p class="text-light">Fill up all details in form to get started</p>
+            </b-col>
+            <b-col class="text-center">
+              <SVGMail class="svg-icon" alt="Queries" />
+              <h2 class="py-2 text-light">Queries</h2>
+              <p class="text-light">Send us your questions through mail</p>
+            </b-col>
           </b-row>
         </b-container>
       </section>
@@ -52,20 +46,20 @@
 </template>
 
 <script>
-import HeroSection from '../components/HeroSection.vue';
+import HeroSection from '~/components/HeroSection.vue';
 /* eslint import/no-unresolved: off */
-// import SVGMap from '~/assets/images/map.svg';
-// import SVGUser from '~/assets/images/user.svg';
-// import SVGMail from '~/assets/images/mail.svg';
+import SVGMap from '~/assets/images/map.svg';
+import SVGUser from '~/assets/images/user.svg';
+import SVGMail from '~/assets/images/mail.svg';
 
-import homeData from '../../userPages/home.yml';
+import homeData from '~/data/home.yml';
 
 export default {
   components: {
     HeroSection,
-    // SVGMap,
-    // SVGUser,
-    // SVGMail,
+    SVGMap,
+    SVGUser,
+    SVGMail,
   },
   data() {
     return {

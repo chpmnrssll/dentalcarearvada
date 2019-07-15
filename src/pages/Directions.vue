@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import directionsData from '../../userPages/directions.yml';
+import directionsData from '~/data/directions.yml';
 
 export default {
   metaInfo: {

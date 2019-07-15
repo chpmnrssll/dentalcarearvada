@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import footerData from '../../userPages/footer.yml';
+import footerData from '~/data/footer.yml';
 
 export default {
   data() {
