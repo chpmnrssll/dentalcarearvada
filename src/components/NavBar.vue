@@ -45,6 +45,9 @@
             <g-link class="" :to="userPage.path">{{ userPage.title }}</g-link>
           </b-nav-item>
           <b-nav-item>
+            <g-link class="" to="/gallery">Our Practice</g-link>
+          </b-nav-item>
+          <b-nav-item>
             <g-link class="" to="/reviews">Reviews</g-link>
           </b-nav-item>
           <!-- <b-nav-item>
