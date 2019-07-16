@@ -20,6 +20,7 @@ query MetaData {
 import '../assets/styles/default.scss';
 import NavBar from '../components/NavBar.vue';
 import Footer from '../components/Footer.vue';
+import smileMore from '../assets/images/smile_more.jpg';
 
 export default {
   // https://vue-meta.nuxtjs.org/faq/component-props.html
@@ -41,6 +42,8 @@ export default {
         { name: 'description', content: this.$static.metaData.siteDescription },
         { itemprop: 'description', content: this.$static.metaData.siteDescription },
         { property: 'og:description', content: this.$static.metaData.siteDescription },
+        { itemprop: 'image', content: smileMore },
+        { property: 'og:image', content: smileMore },
       ],
     };
   },
