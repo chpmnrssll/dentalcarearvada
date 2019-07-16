@@ -1,17 +1,32 @@
 <template>
   <DefaultLayout>
     <section class="d-flex flex-column justify-content-center">
-      <b-container fluid>
-        <b-row>
+      <b-container fluid class="d-flex justify-content-center align-items-center header-container">
+        <h1 class="text-center">How to contact us</h1>
+      </b-container>
+
+      <b-container
+        fluid
+        class="d-flex justify-content-center align-items-center banner-container my-5"
+      >
+        <b-row class="w-100">
           <b-col>
-            <g-image src="~/assets/images/map.png" />
-            8850 Ralston Rd #104 Arvada, CO 80002
+            <address class="text-center">
+              <g-image class="d-block mx-auto mb-2" src="~/assets/images/map.png" />
+              8850 Ralston Rd #104 Arvada, CO 80002
+            </address>
           </b-col>
           <b-col>
-            <g-image src="~/assets/images/phone.png" />
+            <address class="text-center">
+              <g-image class="d-block mx-auto mb-2" src="~/assets/images/phone.png" />
+              <a href="tel:+13034203323">(303) 420-3323</a>
+            </address>
           </b-col>
           <b-col>
-            <g-image src="~/assets/images/email.png" />
+            <address class="text-center">
+              <g-image class="d-block mx-auto mb-2" src="~/assets/images/email.png" />
+              <a href="mailto:some@email.com">some@email.com</a>
+            </address>
           </b-col>
         </b-row>
       </b-container>
@@ -25,7 +40,7 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          <h1 class="text-center">Contact</h1>
+          <h2 class="text-center mb-4">Send us a message</h2>
           <input type="hidden" name="name" value="contact" />
           <p hidden>
             <label> Don’t fill this out: <input name="bot-field" /> </label>
@@ -68,10 +83,11 @@
               v-model="form.message"
               required
               placeholder="Your Message"
+              rows="6"
             />
           </b-form-group>
 
-          <b-button type="submit" variant="primary">Send Request</b-button>
+          <b-button type="submit" variant="primary">Send</b-button>
         </b-form>
       </b-container>
     </section>
@@ -115,18 +131,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.banner-container,
 .form-container {
   max-width: 800px;
 }
-main {
+.header-container {
+  margin-top: 8rem;
+}
+.banner-container {
+}
+.form-container {
+  padding-bottom: 6rem;
+}
+main,
+section {
   background-color: #f3f9f9;
-  height: 100%;
 }
 form {
   background-color: white;
   box-shadow: 0px 0px 8px 2px rgba(157, 169, 169, 0.18);
-  margin: 6rem 0;
-  padding: 6rem;
+  margin: 0;
+  padding: 4rem 6rem;
   width: 100%;
 }
 input,
@@ -137,7 +162,12 @@ textarea {
   padding: 1rem;
 }
 h1 {
-  max-width: 100%;
+  font-size: 2.333rem;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 1.666rem;
+  text-transform: capitalize;
 }
 button {
   background-color: #303030;
