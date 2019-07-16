@@ -55,6 +55,9 @@ import SVGMail from '~/assets/images/mail.svg';
 import homeData from '~/data/home.yml';
 
 export default {
+  metaInfo: {
+    title: 'Home',
+  },
   components: {
     HeroSection,
     SVGMap,
@@ -70,18 +73,8 @@ export default {
     bannerLinks() {
       return homeData.bannerLinks;
     },
-    // SVGs() {
-    //   return homeData.bannerLinks.map(bannerLink => {
-    //     console.log(bannerLink.icon);
-    //     return import(bannerLink.icon);
-    //   });
-    // },
-  },
-  metaInfo: {
-    title: 'Dental Care Arvada',
   },
   mounted() {
-    // console.log(this.SVGs);
     document.querySelectorAll('.svg-icon').forEach(el => {
       el.setAttribute('viewBox', '0 0 24 24');
     });

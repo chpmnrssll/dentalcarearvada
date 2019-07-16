@@ -2,8 +2,15 @@
 
 module.exports = {
   siteName: 'Dental Care Arvada',
-  siteDescription: 'Dental Care Arvada Online',
+  siteDescription:
+    'Dentist Greg Waters quality dental care in Arvada, CO 80004. Waterlase, E4D, invisalign, General dentistry.',
   siteUrl: 'https://dentalcarearvada.netlify.com/',
+  metaData: {
+    siteName: 'Dental Care Arvada',
+    siteDescription:
+      'Dentist Greg Waters quality dental care in Arvada, CO 80004. Waterlase, E4D, invisalign, General dentistry.',
+    siteUrl: 'https://dentalcarearvada.netlify.com/',
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
