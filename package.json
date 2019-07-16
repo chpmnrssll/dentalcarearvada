@@ -16,7 +16,7 @@
     "bootstrap-vue": "^2.0.0-rc.18",
     "chalk": "^2.4.2",
     "faunadb": "^2.6.1",
-    "gridsome": "^0.5.0",
+    "gridsome": "^0.6.6",
     "gridsome-plugin-netlify-cms": "^1.0.6",
     "gridsome-plugin-purgecss": "^1.0.12",
     "hamburgers": "^1.1.3",
