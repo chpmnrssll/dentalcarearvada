@@ -1,7 +1,7 @@
 <template>
   <footer class="page-footer font-small teal py-4">
     <b-container fluid>
-      <b-row class="logo">
+      <b-row class="logo mx-auto mb-2">
         <b-col cols="2">
           <g-image alt="logo" src="~/assets/images/dental-logo-graphic.png" />
         </b-col>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import footerData from '~/data/footer.yml';
+import footerData from '../data/footer.yml';
 
 export default {
   data() {
@@ -52,7 +52,7 @@ hr {
   width: 33%;
 }
 .logo {
-  width: 33%;
+  width: 40%;
 }
 .logo-text-dental {
   font-weight: 800;

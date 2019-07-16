@@ -1,63 +1,80 @@
 <template>
   <DefaultLayout>
-    <b-container fluid class="d-flex justify-content-center align-items-center">
-      <b-form
-        name="contact"
-        method="post"
-        @submit.prevent="handleSubmit"
-        action="/thanks/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <h1 class="text-center">Contact</h1>
-        <input type="hidden" name="name" value="contact" />
-        <p hidden>
-          <label> Don’t fill this out: <input name="bot-field" /> </label>
-        </p>
-        <b-form-group id="input-group-2">
-          <b-form-input
-            id="name"
-            name="name"
-            v-model="form.name"
-            required
-            placeholder="Your Name"
-          />
-        </b-form-group>
+    <section class="d-flex flex-column justify-content-center">
+      <b-container fluid>
+        <b-row>
+          <b-col>
+            <g-image src="~/assets/images/map.png" />
+            8850 Ralston Rd #104 Arvada, CO 80002
+          </b-col>
+          <b-col>
+            <g-image src="~/assets/images/phone.png" />
+          </b-col>
+          <b-col>
+            <g-image src="~/assets/images/email.png" />
+          </b-col>
+        </b-row>
+      </b-container>
 
-        <b-form-group id="input-group-1">
-          <b-form-input
-            id="email"
-            v-model="form.email"
-            name="email"
-            type="email"
-            required
-            placeholder="Your Email"
-          />
-        </b-form-group>
+      <b-container fluid class="d-flex justify-content-center align-items-center form-container">
+        <b-form
+          name="contact"
+          method="post"
+          @submit.prevent="handleSubmit"
+          action="/thanks/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <h1 class="text-center">Contact</h1>
+          <input type="hidden" name="name" value="contact" />
+          <p hidden>
+            <label> Don’t fill this out: <input name="bot-field" /> </label>
+          </p>
+          <b-form-group id="input-group-2">
+            <b-form-input
+              id="name"
+              name="name"
+              v-model="form.name"
+              required
+              placeholder="Your Name"
+            />
+          </b-form-group>
 
-        <b-form-group id="input-group-4">
-          <b-form-input
-            id="phone"
-            v-model="form.phone"
-            name="phone"
-            required
-            placeholder="Your Phone Number"
-          />
-        </b-form-group>
+          <b-form-group id="input-group-1">
+            <b-form-input
+              id="email"
+              v-model="form.email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your Email"
+            />
+          </b-form-group>
 
-        <b-form-group id="input-group-3">
-          <b-form-textarea
-            id="message"
-            name="message"
-            v-model="form.message"
-            required
-            placeholder="Your Message"
-          />
-        </b-form-group>
+          <b-form-group id="input-group-4">
+            <b-form-input
+              id="phone"
+              v-model="form.phone"
+              name="phone"
+              required
+              placeholder="Your Phone Number"
+            />
+          </b-form-group>
 
-        <b-button type="submit" variant="primary">Send Request</b-button>
-      </b-form>
-    </b-container>
+          <b-form-group id="input-group-3">
+            <b-form-textarea
+              id="message"
+              name="message"
+              v-model="form.message"
+              required
+              placeholder="Your Message"
+            />
+          </b-form-group>
+
+          <b-button type="submit" variant="primary">Send Request</b-button>
+        </b-form>
+      </b-container>
+    </section>
   </DefaultLayout>
 </template>
 
@@ -97,13 +114,13 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.container-fluid {
-  height: 100vh;
+<style lang="scss" scoped>
+.form-container {
   max-width: 800px;
 }
 main {
   background-color: #f3f9f9;
+  height: 100%;
 }
 form {
   background-color: white;
