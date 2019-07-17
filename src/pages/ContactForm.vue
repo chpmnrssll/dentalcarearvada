@@ -96,8 +96,14 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Contact',
+  metaInfo() {
+    return {
+      title: 'Contact',
+      meta: [
+        { itemprop: 'name', content: 'Contact' },
+        { property: 'og:title', content: 'Contact' },
+      ],
+    };
   },
   data() {
     return {

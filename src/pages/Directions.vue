@@ -14,11 +14,17 @@
 </template>
 
 <script>
-import directionsData from '~/data/directions.yml';
+import directionsData from '../data/directions.yml';
 
 export default {
-  metaInfo: {
-    title: 'Directions & Map',
+  metaInfo() {
+    return {
+      title: 'Directions & Map',
+      meta: [
+        { itemprop: 'name', content: 'Directions & Map' },
+        { property: 'og:title', content: 'Directions & Map' },
+      ],
+    };
   },
   data() {
     return {

@@ -93,8 +93,11 @@ import SVGMail from '~/assets/images/mail.svg';
 import homeData from '~/data/home.yml';
 
 export default {
-  metaInfo: {
-    title: 'Home',
+  metaInfo() {
+    return {
+      title: 'Home',
+      meta: [{ itemprop: 'name', content: 'Home' }, { property: 'og:title', content: 'Home' }],
+    };
   },
   components: {
     HeroSection,

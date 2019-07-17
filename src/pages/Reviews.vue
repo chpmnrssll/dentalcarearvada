@@ -51,8 +51,14 @@ export default {
   components: {
     ReviewContent,
   },
-  metaInfo: {
-    title: 'Reviews',
+  metaInfo() {
+    return {
+      title: 'Reviews',
+      meta: [
+        { itemprop: 'name', content: 'Reviews' },
+        { property: 'og:title', content: 'Reviews' },
+      ],
+    };
   },
 };
 </script>

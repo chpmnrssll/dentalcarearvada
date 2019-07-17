@@ -26,6 +26,15 @@ import HeroSection from '../components/HeroSection.vue';
 import practiceData from '../data/practice.yml';
 
 export default {
+  metaInfo() {
+    return {
+      title: 'Our Practice',
+      meta: [
+        { itemprop: 'name', content: 'Our Practice' },
+        { property: 'og:title', content: 'Our Practice' },
+      ],
+    };
+  },
   components: {
     HeroSection,
   },
@@ -33,9 +42,6 @@ export default {
     return {
       practiceData,
     };
-  },
-  metaInfo: {
-    title: 'Our Practice',
   },
 };
 </script>

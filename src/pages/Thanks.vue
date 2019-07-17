@@ -10,8 +10,11 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Thanks',
+  metaInfo() {
+    return {
+      title: 'Thanks',
+      meta: [{ itemprop: 'name', content: 'Thanks' }, { property: 'og:title', content: 'Thanks' }],
+    };
   },
 };
 </script>
