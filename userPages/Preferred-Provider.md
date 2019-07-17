@@ -1,5 +1,5 @@
 ---
-showNavLink: false
+showNavLink: true
 title: Preferred Provider
 path: "Insurance--Preferred-Dental-Provider"
 ---

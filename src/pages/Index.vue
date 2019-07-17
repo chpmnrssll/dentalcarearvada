@@ -8,7 +8,7 @@
         <template v-slot:body>
           <b-container class="m-4 p-0 m-lg-auto px-lg-3">
             <b-row>
-              <b-col cols="9">
+              <b-col cols="7" class="mt-md-4">
                 <h1 class="text-dark mb-4">{{ homeData.header }}</h1>
                 <p class="text-dark mb-4">{{ homeData.subHeader }}</p>
                 <b-button @click="" variant="secondary" class="mt-4 py-3 px-5">
@@ -23,21 +23,21 @@
       <section class="banner">
         <b-container fluid>
           <b-row class="p-5">
-            <b-col class="text-center">
+            <b-col xs="12" sm="4" class="text-center">
               <g-link to="/directions">
                 <SVGMap class="svg-icon" alt="Location" />
                 <h2 class="py-2 text-light">Find Location</h2>
                 <p class="text-light">Search locations on Google Map</p>
               </g-link>
             </b-col>
-            <b-col class="text-center">
+            <b-col xs="12" sm="4" class="text-center">
               <g-link to="/forms">
                 <SVGUser class="svg-icon" alt="Patients" />
                 <h2 class="py-2 text-light">New Patient</h2>
                 <p class="text-light">Fill in details to get started</p>
               </g-link>
             </b-col>
-            <b-col class="text-center">
+            <b-col xs="12" sm="4" class="text-center">
               <g-link to="/contact-form">
                 <SVGMail class="svg-icon" alt="Queries" />
                 <h2 class="py-2 text-light">Queries</h2>
@@ -89,6 +89,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  @media (max-width: 960px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 1.5rem;
+  }
+}
 .banner {
   position: relative;
   top: -4rem;

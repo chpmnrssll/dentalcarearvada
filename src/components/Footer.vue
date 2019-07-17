@@ -1,25 +1,27 @@
 <template>
-  <footer class="page-footer font-small teal py-4">
-    <b-container fluid>
-      <b-row class="logo mx-auto mb-2">
-        <b-col cols="2">
-          <g-image alt="logo" src="~/assets/images/dental-logo-graphic.png" />
-        </b-col>
-        <b-col>
-          <span class="ml-3 logo-text-dental">Dental</span>
-          <span class="logo-text-care">Care</span>
-          <b-row>
-            <b-col class="ml-3 logo-text-arvada">Arvada</b-col>
-          </b-row>
-        </b-col>
-      </b-row>
-      <div class="text-center">
-        <strong>{{ footerData.text }}</strong>
-        <hr />
-        <g-link to="/admin" target="_blank" v-if="footerData.netlifyCMSLink">Netlify CMS</g-link>
-      </div>
-    </b-container>
-  </footer>
+  <section>
+    <footer class="page-footer font-small teal py-4">
+      <b-container fluid>
+        <b-row class="logo mx-auto mb-2">
+          <b-col cols="2">
+            <g-image alt="logo" src="~/assets/images/dental-logo-graphic.png" />
+          </b-col>
+          <b-col>
+            <span class="ml-3 logo-text-dental">Dental</span>
+            <span class="logo-text-care">Care</span>
+            <b-row>
+              <b-col class="ml-3 logo-text-arvada">Arvada</b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+        <div class="text-center">
+          <strong>{{ footerData.text }}</strong>
+          <hr />
+          <g-link to="/admin" target="_blank" v-if="footerData.netlifyCMSLink">Netlify CMS</g-link>
+        </div>
+      </b-container>
+    </footer>
+  </section>
 </template>
 
 <script>
@@ -39,7 +41,7 @@ footer {
   background-color: #1d3349;
   color: var(--light);
   // margin-top: 6rem;
-  height: 33.333vh;
+  min-height: 33.333vh;
   width: 100%;
 }
 a {

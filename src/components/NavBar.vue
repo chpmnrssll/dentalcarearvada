@@ -41,14 +41,14 @@
           <b-nav-item>
             <g-link class="" to="/">Home</g-link>
           </b-nav-item>
-          <b-nav-item v-for="(userPage, index) in userPages" :key="index">
-            <g-link class="" :to="userPage.path">{{ userPage.title }}</g-link>
-          </b-nav-item>
           <b-nav-item>
             <g-link class="" to="/gallery">Our Practice</g-link>
           </b-nav-item>
           <b-nav-item>
             <g-link class="" to="/reviews">Reviews</g-link>
+          </b-nav-item>
+          <b-nav-item v-for="(userPage, index) in userPages" :key="index">
+            <g-link class="" :to="userPage.path">{{ userPage.title }}</g-link>
           </b-nav-item>
           <!-- <b-nav-item>
             <g-link class="" to="/forms">Forms</g-link>
@@ -169,15 +169,15 @@ nav {
   transform: translate3d(0, 0, 0);
   transition: 0.1s transform linear;
 
-  @media (max-width: 640px) {
-    background-image: linear-gradient(180deg, #ffffffff 0%, #ffffff00 100%);
-  }
+  // @media (max-width: 960px) {
+  //   background-image: linear-gradient(180deg, #ffffffff 0%, #ffffff00 100%);
+  // }
 
   .hamburger {
     .hamburger-inner,
     .hamburger-inner:after,
     .hamburger-inner:before {
-      background-color: var(--light);
+      background-color: var(--dark);
     }
   }
 
@@ -186,13 +186,14 @@ nav {
       color: var(--dark);
       font-size: 100%;
       text-decoration: none;
+      -webkit-text-stroke: 1px #00000022;
 
       &:hover {
         color: var(--primary);
       }
 
-      @media (max-width: 640px) {
-        color: var(--light);
+      @media (max-width: 960px) {
+        color: #207fdc88;
         text-shadow: 1px 2px 4px #00000088;
         font-size: 2rem;
       }
@@ -204,13 +205,10 @@ nav {
   }
 
   .nav-collapse {
-    background-image: linear-gradient(180deg, #ffffff00 0%, #00000088 100%);
     height: 100vh;
     transition: height 0.25s ease-out;
 
-    // disable gradient > 640px
     @media (min-width: 640px) {
-      background-image: none;
       height: auto;
       width: 100%;
     }
@@ -218,6 +216,7 @@ nav {
 
   .active--exact {
     font-weight: bold;
+    text-shadow: 1px 1px 4px #207fdc44;
   }
 }
 
