@@ -51,10 +51,10 @@ hr {
   border-color: var(--light);
 }
 .container-fluid {
-  width: 33%;
+  min-width: 33%;
 }
 .logo {
-  width: 40%;
+  width: 11rem;
 }
 .logo-text-dental {
   font-weight: 800;
@@ -65,8 +65,8 @@ hr {
 .logo-text-arvada {
   font-size: 0.75rem;
   font-weight: 200;
-  margin-top: -0.25rem;
   letter-spacing: 0.25rem;
+  margin-top: -0.25rem;
   text-align: center;
 }
 </style>
