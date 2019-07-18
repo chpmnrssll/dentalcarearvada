@@ -2,22 +2,18 @@
   <section>
     <footer class="page-footer font-small teal py-4">
       <b-container fluid>
-        <b-row class="logo mx-auto mb-2">
-          <b-col cols="2">
-            <g-image alt="logo" src="~/assets/images/dental-logo-graphic.png" />
-          </b-col>
-          <b-col>
-            <span class="ml-3 logo-text-dental">Dental</span>
-            <span class="logo-text-care">Care</span>
-            <b-row>
-              <b-col class="ml-3 logo-text-arvada">Arvada</b-col>
-            </b-row>
-          </b-col>
-        </b-row>
+        <Logo light class="mx-auto pb-4" />
         <div class="text-center">
           <strong>{{ footerData.text }}</strong>
-          <hr />
-          <g-link to="/admin" target="_blank" v-if="footerData.netlifyCMSLink">Netlify CMS</g-link>
+          <hr class="my-4" />
+          <g-link
+            to="/admin"
+            target="_blank"
+            v-if="footerData.netlifyCMSLink"
+            class="netlifyCMSLink"
+          >
+            Netlify CMS
+          </g-link>
         </div>
       </b-container>
     </footer>
@@ -25,9 +21,13 @@
 </template>
 
 <script>
+import Logo from './Logo.vue';
 import footerData from '../data/footer.yml';
 
 export default {
+  components: {
+    Logo,
+  },
   data() {
     return {
       footerData,
@@ -37,6 +37,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container-fluid {
+  min-width: 33%;
+}
+
+.netlifyCMSLink {
+  color: #20c997;
+}
+
 footer {
   background-color: #1d3349;
   color: var(--light);
@@ -44,29 +52,8 @@ footer {
   min-height: 33.333vh;
   width: 100%;
 }
-a {
-  color: #20c997;
-}
+
 hr {
   border-color: var(--light);
-}
-.container-fluid {
-  min-width: 33%;
-}
-.logo {
-  width: 11rem;
-}
-.logo-text-dental {
-  font-weight: 800;
-}
-.logo-text-care {
-  font-weight: 200;
-}
-.logo-text-arvada {
-  font-size: 0.75rem;
-  font-weight: 200;
-  letter-spacing: 0.25rem;
-  margin-top: -0.25rem;
-  text-align: center;
 }
 </style>

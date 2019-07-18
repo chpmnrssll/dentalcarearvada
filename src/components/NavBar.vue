@@ -6,21 +6,8 @@
     toggleable="lg"
   >
     <b-container fluid>
-      <b-navbar-brand class="m-4 p-0 mx-lg-0">
-        <g-link to="/">
-          <b-row>
-            <b-col cols="2">
-              <g-image alt="logo" src="~/assets/images/dental-logo-graphic.png" immediate />
-            </b-col>
-            <b-col>
-              <span class="ml-3 logo-text-dental">Dental</span>
-              <span class="logo-text-care">Care</span>
-              <b-row>
-                <b-col class="ml-3 logo-text-arvada">Arvada</b-col>
-              </b-row>
-            </b-col>
-          </b-row>
-        </g-link>
+      <b-navbar-brand class="m-4 mx-lg-0 p-0">
+        <Logo />
       </b-navbar-brand>
 
       <b-navbar-toggle class="m-4 p-0" target="nav_collapse">
@@ -82,10 +69,14 @@ query UserPages {
 <script>
 /* eslint no-param-reassign: "error" */
 import { mapActions, mapGetters } from 'vuex';
+import Logo from './Logo.vue';
 
-const OFFSET = 40;
+const OFFSET = 0;
 
 export default {
+  components: {
+    Logo,
+  },
   data() {
     return {
       showNavbar: true,
@@ -160,6 +151,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container-fluid {
+  max-width: 1240px;
+}
+
+.hamburger {
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    background-color: var(--dark);
+  }
+}
+
 .hide-navbar {
   transform: translate3d(0, -100%, 0);
 }
@@ -169,79 +172,38 @@ nav {
   transform: translate3d(0, 0, 0);
   transition: 0.1s transform linear;
 
-  // @media (max-width: 960px) {
-  //   background-image: linear-gradient(180deg, #ffffffff 0%, #ffffff00 100%);
-  // }
-
-  .hamburger {
-    .hamburger-inner,
-    .hamburger-inner:after,
-    .hamburger-inner:before {
-      background-color: var(--dark);
-    }
-  }
-
-  .nav-link {
-    a {
-      color: var(--dark);
-      font-size: 100%;
-      text-decoration: none;
-      -webkit-text-stroke: 1px #00000022;
-
-      &:hover {
-        color: var(--primary);
-      }
-
-      @media (max-width: 960px) {
-        color: #207fdc88;
-        text-shadow: 1px 2px 4px #00000088;
-        font-size: 2rem;
-      }
-    }
-  }
-
-  .container-fluid {
-    max-width: 1240px;
-  }
-
-  .nav-collapse {
-    height: 100vh;
-    transition: height 0.25s ease-out;
-
-    @media (min-width: 640px) {
-      height: auto;
-      width: 100%;
-    }
-  }
-
   .active--exact {
-    font-weight: bold;
     text-shadow: 1px 1px 4px #207fdc44;
   }
 }
 
-.navbar-brand {
+.nav-collapse {
+  height: 100vh;
+  transition: height 0.25s ease-out;
+
+  @media (min-width: 640px) {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.nav-link {
   a {
     color: var(--dark);
-    font-size: 1.25rem;
+    font-size: 100%;
+    text-decoration: none;
+    -webkit-text-stroke: 1px #00000022;
 
-    &:hover {
-      text-decoration: none;
+    &:hover,
+    &.active--exact {
       color: var(--primary);
     }
-  }
-  .logo-text-dental {
-    font-weight: 800;
-  }
-  .logo-text-care {
-    font-weight: 200;
-  }
-  .logo-text-arvada {
-    font-size: 0.75rem;
-    font-weight: 200;
-    margin-top: -0.25rem;
-    letter-spacing: 0.25rem;
-    text-align: center;
+
+    @media (max-width: 960px) {
+      color: #207fdc88;
+      text-shadow: 1px 2px 4px #00000088;
+      font-size: 2rem;
+    }
   }
 }
 </style>
