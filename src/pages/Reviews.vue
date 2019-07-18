@@ -4,12 +4,12 @@
       <b-container fluid>
         <b-row>
           <b-col
-            class="d-block mx-auto"
+            class="d-block mx-auto my-5"
             xs="12"
-            sm="6"
+            sm="12"
             md="6"
-            lg="4"
-            xl="4"
+            lg="6"
+            xl="6"
             v-for="edge in $page.reviews.edges"
             :key="edge.node.path"
           >
@@ -69,7 +69,7 @@ export default {
   max-width: 1210px;
 }
 .g-image {
-  width: 75%;
+  width: 50%;
 }
 h2 {
   font-size: 1rem;
