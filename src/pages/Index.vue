@@ -23,25 +23,25 @@
       <section class="banner">
         <b-container fluid>
           <b-row class="p-5">
-            <b-col xs="12" sm="4" class="text-center">
+            <b-col xs="12" md="4" class="text-center">
               <g-link to="/directions">
                 <SVGMap class="svg-icon" alt="Location" />
-                <h3 class="py-2 text-light">Find Location</h3>
-                <p class="text-light">Search locations on Google Map</p>
+                <h3 class="m-0 pt-4 text-light">Find Location</h3>
+                <p class="text-center text-light">Search locations on Google Map</p>
               </g-link>
             </b-col>
-            <b-col xs="12" sm="4" class="text-center pt-sm-0 pt-5">
+            <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/forms">
                 <SVGUser class="svg-icon" alt="Patients" />
-                <h3 class="py-2 text-light">New Patient</h3>
-                <p class="text-light">Fill in details to get started</p>
+                <h3 class="m-0 pt-4 text-light">New Patient</h3>
+                <p class="text-center text-light">Fill in details to get started</p>
               </g-link>
             </b-col>
-            <b-col xs="12" sm="4" class="text-center pt-sm-0 pt-5">
+            <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/contact-form">
                 <SVGMail class="svg-icon" alt="Queries" />
-                <h3 class="py-2 text-light">Queries</h3>
-                <p class="text-light">Send us your questions</p>
+                <h3 class="m-0 pt-4 text-light">Queries</h3>
+                <p class="text-center text-light">Send us your questions</p>
               </g-link>
             </b-col>
           </b-row>

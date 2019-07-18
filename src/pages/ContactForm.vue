@@ -88,7 +88,7 @@
             />
           </b-form-group>
 
-          <b-button type="submit" variant="primary">Send</b-button>
+          <b-button type="submit" variant="secondary">Send</b-button>
         </b-form>
       </b-container>
     </section>
@@ -145,8 +145,6 @@ export default {
 .header-container {
   margin-top: 8rem;
 }
-.banner-container {
-}
 .form-container {
   padding-bottom: 6rem;
 }
@@ -177,15 +175,6 @@ h2 {
   text-transform: capitalize;
 }
 button {
-  background-color: #303030;
-  border-color: #d3d3d3;
-  color: #d3d3d3;
   padding: 1rem 2rem;
-
-  &:hover {
-    background-color: #d3d3d3;
-    border-color: #d3d3d3;
-    color: #303030;
-  }
 }
 </style>

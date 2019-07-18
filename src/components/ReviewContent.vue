@@ -23,7 +23,7 @@ export default {
     padding: 1rem 0;
     text-align: justify;
 
-    @media (min-width: 640px) {
+    @media (min-width: 960px) {
       padding: 1rem 4rem;
     }
   }

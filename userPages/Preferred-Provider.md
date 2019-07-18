@@ -3,6 +3,8 @@ showNavLink: true
 title: Preferred Provider
 path: "Insurance--Preferred-Dental-Provider"
 ---
+## Preferred Provider
+
 Dr. Waters proudly participates as a preferred provider for the following Dental Health Insurance Plans:
 
 * Cigna Dental PPO
@@ -14,7 +16,7 @@ Dr. Waters proudly participates as a preferred provider for the following Dental
 * United Concordia Advantage Plus PPO
 * United Healthcare Dental PPO
 
-## Payment Methods:
+### Payment Methods:
 
 Cash, Check, Debit, Visa, Discover, Mastercard, Care Credit
 
