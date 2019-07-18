@@ -3,7 +3,7 @@
     <section class="pageContent">
       <HeroSection section-height="650px">
         <template v-slot:background>
-          <g-image src="~/assets/images/denatl.jpg" alt="" immediate />
+          <g-image src="~/assets/images/dental.jpg" alt="" immediate />
         </template>
         <template v-slot:body>
           <b-container class="m-4 p-0 m-lg-auto px-lg-3">
@@ -64,13 +64,11 @@
                   <h2 class="my-4">Committed To Dental Excellence</h2>
                   <h3 class="mb-4">We create beautiful and brighter smiles</h3>
                   <p class="mb-4">
-                    Urna habitasse imperdiet! Aut, deleniti nisl, varius? Nunc, iure iure nunc sit
-                    mi ducimus atque nostrum iure ducimus quae dolore. Massa sapien at do ipsum
-                    nostra adipisicing.
-                  </p>
-                  <p class="mb-4">
-                    rutrum fugiat doloribus, dolor, ipsa commodi doloremque do senectus neque
-                    molestiae dis nisi euismod, diam illo incididunt dignissim expedita.
+                    Dr. Waters is a 1999 Graduate of University of Colorado Dental School and has
+                    served patient's Dentistry needs for over ten years. He completed two years of
+                    General Practice Residency in 2000 at Denver Health Medical Center. Dr. Waters
+                    is an Arvada native, and with his wife and three children enjoy all Colorado has
+                    to offer.
                   </p>
                   <h4 class="my-4">Gregory B. Waters, DDS, PC</h4>
                 </b-container>

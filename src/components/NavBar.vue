@@ -41,7 +41,7 @@
             <g-link class="" to="/forms">Forms</g-link>
           </b-nav-item> -->
           <b-nav-item>
-            <g-link class="" to="/directions">Directions & Map</g-link>
+            <g-link class="" to="/directions">Directions &amp; Map</g-link>
           </b-nav-item>
           <b-nav-item>
             <g-link class="" to="/contact-form">Contact</g-link>

@@ -13,19 +13,20 @@
           <b-col>
             <address class="text-center">
               <g-image class="d-block mx-auto mb-2" src="~/assets/images/map.png" />
-              8850 Ralston Rd #104 Arvada, CO 80002
+              <div>8850 Ralston Rd #104</div>
+              <div>Arvada, CO 80002</div>
             </address>
           </b-col>
           <b-col>
             <address class="text-center">
               <g-image class="d-block mx-auto mb-2" src="~/assets/images/phone.png" />
-              <a href="tel:+13034203323">(303) 420-3323</a>
+              <a href="tel:+13034203323" class="text-dark">(303) 420-3323</a>
             </address>
           </b-col>
           <b-col>
             <address class="text-center">
               <g-image class="d-block mx-auto mb-2" src="~/assets/images/email.png" />
-              <a href="mailto:some@email.com">some@email.com</a>
+              <a href="mailto:some@email.com" class="text-dark">some@email.com</a>
             </address>
           </b-col>
         </b-row>

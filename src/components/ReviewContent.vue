@@ -20,6 +20,12 @@ export default {
     font-size: 100%;
     font-style: italic;
     margin-bottom: 0;
+    padding: 1rem 0;
+    text-align: justify;
+
+    @media (min-width: 640px) {
+      padding: 1rem 4rem;
+    }
   }
   h1 {
     font-size: 1.25rem;
