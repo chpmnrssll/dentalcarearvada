@@ -52,25 +52,39 @@
         <template v-slot:body>
           <b-container class="m-lg-auto p-1 p-md-3 px-lg-3">
             <b-row>
-              <b-col md="12" lg="4" offset="1">
-                <g-image
+              <b-col md="12" lg="4">
+                <!-- <g-image
                   src="~/assets/images/DrW-cropped.jpg"
                   alt="Gregory B. Waters, DDS, PC"
                   class="w-100"
+                /> -->
+                <g-image
+                  src="~/assets/images/5280_TopDentistsLogo_2015.svg"
+                  alt="5280 Top Dentists 2015"
+                  class="w-100"
                 />
               </b-col>
-              <b-col lg="6" class="d-flex flex-column justify-content-center">
+              <b-col lg="7" class="d-flex flex-column justify-content-center">
                 <b-container class="px-0">
-                  <h2 class="my-4">Committed To Dental Excellence</h2>
-                  <h3 class="mb-4">We create beautiful and brighter smiles</h3>
+                  <h3 class="mb-4">Three times voted "Denver's Top Dentists" in 5280 Magazine!</h3>
                   <p class="mb-4">
-                    Dr. Waters is a 1999 Graduate of University of Colorado Dental School and has
-                    served patient's Dentistry needs for over ten years. He completed two years of
-                    General Practice Residency in 2000 at Denver Health Medical Center. Dr. Waters
-                    is an Arvada native, and with his wife and three children enjoy all Colorado has
-                    to offer.
+                    Welcome new and existing patients of Dr. Greg Waters, DDS to our online
+                    resource. We try to make visiting our practice a uniquely warm and welcoming
+                    experience. You'll find we listen to your treatment goals and make your visits
+                    as comfortable as possible. Our goal is to offer the very best quality care in
+                    an environment that values each patient. We'll help you achieve a beautiful and
+                    healthy smile.
                   </p>
-                  <h4 class="my-4">Gregory B. Waters, DDS, PC</h4>
+                  <p class="mb-4">
+                    You can access our website to request an appointment, and find answers to your
+                    dental questions including procedure animations and informational resources.
+                  </p>
+                  <p class="mb-4">
+                    Information about our office, including directions, forms you can fill out prior
+                    to your visit, insurance carrier and forms of payment accepted are available
+                    online. Please don't hesitate to <g-link to="/contact">contact</g-link> us as
+                    well and enjoy your online visit.
+                  </p>
                 </b-container>
               </b-col>
             </b-row>
@@ -95,7 +109,7 @@
               </b-col>
               <b-col md="12" lg="4" class="d-flex p-0">
                 <b-container>
-                  <g-image src="~/assets/images/_E4D_Console.jpg" class="p-2 w-100" />
+                  <g-image src="~/assets/images/E4D-machine.png" class="p-2 w-100" />
                 </b-container>
               </b-col>
             </b-row>
