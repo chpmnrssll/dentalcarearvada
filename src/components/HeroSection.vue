@@ -38,12 +38,9 @@ export default {
       // set this sections' height to match .HeroSection-body
       const body = this.$el.querySelector('.HeroSection-body div');
       const bodyHeight = parseInt(window.getComputedStyle(body).height, 10);
-      if (sectionHeight && sectionHeight > bodyHeight) {
+      if (!Number.isNaN(sectionHeight)) {
         this.$el.style.height = this.sectionHeight;
         body.parentElement.parentElement.style.height = this.sectionHeight;
-      } else {
-        this.$el.style.height = `${bodyHeight}px`;
-        body.parentElement.parentElement.style.height = `${bodyHeight}px`;
       }
 
       if (this.fixed) {

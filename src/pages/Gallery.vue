@@ -1,7 +1,7 @@
 <template>
   <DefaultLayout>
     <section class="pageContent">
-      <HeroSection section-height="650px">
+      <HeroSection>
         <template v-slot:body>
           <b-container class="m-lg-auto p-1 p-md-3 px-lg-3">
             <b-row>
@@ -77,13 +77,21 @@
 
             <b-container fluid class="p-0">
               <b-row>
-                <b-col md="12" lg="6" class="d-flex p-0">
-                  <b-container>
-                    <g-image src="~/assets/images/_E4D_mill.jpg" class="image-grid p-2" />
-                    <g-image src="~/assets/images/image09.jpg" class="image-grid p-2" />
-                    <g-image src="~/assets/images/image08.jpg" class="image-grid p-2" />
-                    <g-image src="~/assets/images/_E4D_Console.jpg" class="image-grid p-2" />
-                  </b-container>
+                <b-col md="12" lg="6" class="p-0">
+                  <b-row>
+                    <b-col cols="6">
+                      <g-image src="~/assets/images/_E4D_mill.jpg" class="image-grid p-2" />
+                    </b-col>
+                    <b-col cols="6">
+                      <g-image src="~/assets/images/image09.jpg" class="image-grid p-2" />
+                    </b-col>
+                    <b-col cols="6">
+                      <g-image src="~/assets/images/image08.jpg" class="image-grid p-2" />
+                    </b-col>
+                    <b-col cols="6">
+                      <g-image src="~/assets/images/_E4D_Console.jpg" class="image-grid p-2" />
+                    </b-col>
+                  </b-row>
                 </b-col>
                 <b-col class="d-flex flex-column justify-content-center p-4">
                   <h2><small>Dentistry For Today’s Lifestyle</small></h2>
@@ -144,12 +152,12 @@ p {
 .complete-care {
   background-color: #f3f9f9;
   border-top: 1px solid #e4edec;
-  padding-top: 6rem;
-  min-height: 1440px;
+  padding-top: 16rem;
+  // min-height: 1440px;
 }
 .image-grid {
-  height: 50%;
-  width: 50%;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  // overflow: hidden;
 }
 </style>
