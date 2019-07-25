@@ -63,10 +63,6 @@ collections:
             fields:
               - { label: "Header", name: "header", widget: "string" }
               - { label: "Body", name: "body", widget: "markdown" }
-              - label: "Text"
-                name: "text"
-                widget: "list"
-                field: { label: "Text", name: "text", widget: "string" }
 
           - label: "Section 3"
             name: "section3"
@@ -74,10 +70,6 @@ collections:
             fields:
               - { label: "Header", name: "header", widget: "string" }
               - { label: "Body", name: "body", widget: "markdown" }
-              - label: "Text"
-                name: "text"
-                widget: "list"
-                field: { label: "Text", name: "text", widget: "string" }
 
       - label: "Our Practice"
         name: "practice"
