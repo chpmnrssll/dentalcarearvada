@@ -25,21 +25,42 @@
           <b-row class="p-5">
             <b-col xs="12" md="4" class="text-center">
               <g-link to="/directions">
-                <SVGMap class="svg-icon" :alt="homeData.banner.directions.title" />
-                <h3 class="m-0 pt-4 text-light">{{ homeData.banner.directions.title }}</h3>
-                <p class="text-center text-light">{{ homeData.banner.directions.text }}</p>
+                <g-image
+                  :src="homeData.banner.directions.image"
+                  :alt="homeData.banner.directions.title"
+                  class="svg-icon"
+                />
+                <g-image
+                  :src="$page.homeData.edges[0].node.banner.directions.image"
+                  :alt="$page.homeData.edges[0].node.banner.directions.title"
+                  class="svg-icon"
+                />
+                <h3 class="m-0 pt-4 text-light">
+                  {{ $page.homeData.edges[0].node.banner.directions.title }}
+                </h3>
+                <p class="text-center text-light">
+                  {{ $page.homeData.edges[0].node.banner.directions.text }}
+                </p>
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/forms">
-                <SVGUser class="svg-icon" :alt="homeData.banner.forms.title" />
+                <g-image
+                  :src="homeData.banner.forms.image"
+                  :alt="homeData.banner.forms.title"
+                  class="svg-icon"
+                />
                 <h3 class="m-0 pt-4 text-light">{{ homeData.banner.forms.title }}</h3>
                 <p class="text-center text-light">{{ homeData.banner.forms.text }}</p>
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/contact-form">
-                <SVGMail class="svg-icon" :alt="homeData.banner.contact.title" />
+                <g-image
+                  :src="homeData.banner.contact.image"
+                  :alt="homeData.banner.contact.title"
+                  class="svg-icon"
+                />
                 <h3 class="m-0 pt-4 text-light">{{ homeData.banner.contact.title }}</h3>
                 <p class="text-center text-light">{{ homeData.banner.contact.text }}</p>
               </g-link>
@@ -91,12 +112,53 @@
   </DefaultLayout>
 </template>
 
+<page-query>
+query HomeData {
+  homeData: allhomeData {
+    edges {
+      node {
+        title
+        header
+        subHeader
+        buttonText
+        banner {
+          contact {
+            href
+            text
+            title
+          }
+          directions {
+            href
+            image
+            text
+            title
+          }
+          forms {
+            href
+            text
+            title
+          }
+        }
+        section2 {
+          body
+          header
+        }
+        section3 {
+          body
+          header
+        }
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 import HeroSection from '~/components/HeroSection.vue';
 /* eslint import/no-unresolved: off */
-import SVGMap from '~/assets/images/map.svg';
-import SVGUser from '~/assets/images/user.svg';
-import SVGMail from '~/assets/images/mail.svg';
+// import SVGMap from '~/assets/images/map.svg';
+// import SVGUser from '~/assets/images/user.svg';
+// import SVGMail from '~/assets/images/mail.svg';
 
 import homeData from '~/data/home.yml';
 
@@ -109,9 +171,9 @@ export default {
   },
   components: {
     HeroSection,
-    SVGMap,
-    SVGUser,
-    SVGMail,
+    // SVGMap,
+    // SVGUser,
+    // SVGMail,
   },
   data() {
     return {
@@ -124,6 +186,7 @@ export default {
     },
   },
   mounted() {
+    // console.log(this.$page.homeData.edges[0].node.banner.directions.image);
     document.querySelectorAll('.svg-icon').forEach(el => {
       el.setAttribute('viewBox', '0 0 24 24');
     });

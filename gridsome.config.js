@@ -1,15 +1,15 @@
 // const path = require('path');
-
-module.exports = {
+const siteData = {
   siteName: 'Dental Care Arvada',
+  siteUrl: 'https://dentalcarearvada.netlify.com/',
   siteDescription:
     'Dentist Greg Waters quality dental care in Arvada, CO 80004. Waterlase, E4D, invisalign, General dentistry.',
-  siteUrl: 'https://dentalcarearvada.netlify.com/',
+};
+
+module.exports = {
+  ...siteData,
   metaData: {
-    siteName: 'Dental Care Arvada',
-    siteDescription:
-      'Dentist Greg Waters quality dental care in Arvada, CO 80004. Waterlase, E4D, invisalign, General dentistry.',
-    siteUrl: 'https://dentalcarearvada.netlify.com/',
+    ...siteData,
   },
   plugins: [
     {
@@ -36,6 +36,13 @@ module.exports = {
           externalLinksTarget: '_blank',
           externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
         },
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/home.yml',
+        typeName: 'homeData',
       },
     },
     {

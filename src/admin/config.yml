@@ -4,7 +4,7 @@ backend:
   squash_merges: true
 
 media_folder: "/src/assets/images"
-public_folder: "/src/assets/images"
+public_folder: "../assets/images"
 
 collections:
   - label: "Pages"
@@ -40,6 +40,7 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "URL", name: "href", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "string" }
               - label: "Forms"
@@ -47,6 +48,7 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "URL", name: "href", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "string" }
               - label: "Contact"
@@ -54,6 +56,7 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "URL", name: "href", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "string" }
 
