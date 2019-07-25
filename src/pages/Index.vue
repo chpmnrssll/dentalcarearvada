@@ -25,23 +25,23 @@
           <b-row class="p-5">
             <b-col xs="12" md="4" class="text-center">
               <g-link to="/directions">
-                <SVGMap class="svg-icon" alt="Location" />
-                <h3 class="m-0 pt-4 text-light">Find Location</h3>
-                <p class="text-center text-light">Search locations on Google Map</p>
+                <SVGMap class="svg-icon" :alt="homeData.banner.directions.title" />
+                <h3 class="m-0 pt-4 text-light">{{ homeData.banner.directions.title }}</h3>
+                <p class="text-center text-light">{{ homeData.banner.directions.text }}</p>
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/forms">
-                <SVGUser class="svg-icon" alt="Patients" />
-                <h3 class="m-0 pt-4 text-light">New Patient</h3>
-                <p class="text-center text-light">Fill in details to get started</p>
+                <SVGUser class="svg-icon" :alt="homeData.banner.forms.title" />
+                <h3 class="m-0 pt-4 text-light">{{ homeData.banner.forms.title }}</h3>
+                <p class="text-center text-light">{{ homeData.banner.forms.text }}</p>
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/contact-form">
-                <SVGMail class="svg-icon" alt="Queries" />
-                <h3 class="m-0 pt-4 text-light">Queries</h3>
-                <p class="text-center text-light">Send us your questions</p>
+                <SVGMail class="svg-icon" :alt="homeData.banner.contact.title" />
+                <h3 class="m-0 pt-4 text-light">{{ homeData.banner.contact.title }}</h3>
+                <p class="text-center text-light">{{ homeData.banner.contact.text }}</p>
               </g-link>
             </b-col>
           </b-row>
@@ -53,11 +53,6 @@
           <b-container class="m-lg-auto p-1 p-md-3 px-lg-3">
             <b-row>
               <b-col md="12" lg="4">
-                <!-- <g-image
-                  src="~/assets/images/DrW-cropped.jpg"
-                  alt="Gregory B. Waters, DDS, PC"
-                  class="w-100"
-                /> -->
                 <g-image
                   src="~/assets/images/5280_TopDentistsLogo_2015.svg"
                   alt="5280 Top Dentists 2015"
@@ -66,25 +61,13 @@
               </b-col>
               <b-col lg="7" class="d-flex flex-column justify-content-center">
                 <b-container class="px-0">
-                  <h3 class="mb-4">Three times voted "Denver's Top Dentists" in 5280 Magazine!</h3>
-                  <p class="mb-4">
-                    Welcome new and existing patients of Dr. Greg Waters, DDS to our online
-                    resource. We try to make visiting our practice a uniquely warm and welcoming
-                    experience. You'll find we listen to your treatment goals and make your visits
-                    as comfortable as possible. Our goal is to offer the very best quality care in
-                    an environment that values each patient. We'll help you achieve a beautiful and
-                    healthy smile.
-                  </p>
-                  <p class="mb-4">
-                    You can access our website to request an appointment, and find answers to your
-                    dental questions including procedure animations and informational resources.
-                  </p>
-                  <p class="mb-4">
-                    Information about our office, including directions, forms you can fill out prior
-                    to your visit, insurance carrier and forms of payment accepted are available
-                    online. Please don't hesitate to <g-link to="/contact">contact</g-link> us as
-                    well and enjoy your online visit.
-                  </p>
+                  <h3 class="mb-4" v-html="homeData.section2.header" />
+                  <p
+                    class="mb-4"
+                    v-for="text in homeData.section2.text"
+                    :key="text"
+                    v-html="text"
+                  />
                 </b-container>
               </b-col>
             </b-row>
@@ -97,15 +80,8 @@
           <b-container class="m-lg-auto p-1 pb-3 my-3 pt-md-0 p-md-3 px-lg-3">
             <b-row>
               <b-col lg="6" offset="1" class="d-flex flex-column justify-content-center p-4">
-                <h2><small>Clinically Proven State-of-the-Art Dental Technology</small></h2>
-                <p>
-                  Dr. Waters uses modern, clinically proven methods to offer his patients the best
-                  quality care available. His practice is equipped with state of the art E4D
-                  technology, which can mill a custom crown on-site. Often with a single visit, Dr.
-                  Waters can offer procedures which previously required weeks. Same Day Crown: You
-                  may prefer the convenience and health benefits of eliminating multiple trips when
-                  a crowning procedure is necessary.
-                </p>
+                <h3 class="mb-4" v-html="homeData.section3.header" />
+                <p class="mb-4" v-for="text in homeData.section3.text" :key="text" v-html="text" />
               </b-col>
               <b-col md="12" lg="4" class="d-flex p-0">
                 <b-container>
