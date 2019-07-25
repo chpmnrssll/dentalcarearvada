@@ -62,6 +62,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Header", name: "header", widget: "string" }
+              - { label: "Body", name: "body", widget: "markdown" }
               - label: "Text"
                 name: "text"
                 widget: "list"
