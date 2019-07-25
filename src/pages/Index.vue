@@ -62,12 +62,7 @@
               <b-col lg="7" class="d-flex flex-column justify-content-center">
                 <b-container class="px-0">
                   <h3 class="mb-4" v-html="homeData.section2.header" />
-                  <p
-                    class="mb-4"
-                    v-for="text in homeData.section2.text"
-                    :key="text"
-                    v-html="text"
-                  />
+                  <p class="mb-4" v-html="homeData.section2.body" />
                 </b-container>
               </b-col>
             </b-row>
@@ -81,7 +76,7 @@
             <b-row>
               <b-col lg="6" offset="1" class="d-flex flex-column justify-content-center p-4">
                 <h3 class="mb-4" v-html="homeData.section3.header" />
-                <p class="mb-4" v-for="text in homeData.section3.text" :key="text" v-html="text" />
+                <p class="mb-4" v-html="homeData.section3.body" />
               </b-col>
               <b-col md="12" lg="4" class="d-flex p-0">
                 <b-container>
