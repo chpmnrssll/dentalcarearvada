@@ -1,30 +1,57 @@
-title: "Dental Care Arvada"
-header: "A better life starts with a beautiful smile"
-subHeader: "Care in an environment of excellence"
-buttonText: "Book an appointment"
+title: Dental Care Arvada
+header: A better life starts with a beautiful smile
+subHeader: Care in an environment of excellence
+buttonText: Book an appointment
 banner:
-  directions:
-    href: "/directions"
-    title: "Find Location"
-    text: "Search locations on Google Map"
-  forms:
-    href: "/forms"
-    title: "New Patients"
-    text: "Fill in details to get started"
   contact:
-    href: "/contact-form"
-    title: "Contact"
-    text: "Send us your questions"
+    href: /contact-form
+    text: Send us your questions
+    title: Contact
+  directions:
+    href: /directions
+    text: Search locations on Google Map
+    title: Find Location
+  forms:
+    href: /forms
+    text: Fill in details to get started
+    title: New Patients
 section2:
-  header: "Three times voted \"Denver's Top Dentists\" in 5280 Magazine!"
+  header: Three times voted "Denver's Top Dentists" in 5280 Magazine!
   text:
-    - "Welcome new and existing patients of Dr. Greg Waters, DDS to our online resource. We try to make visiting our practice a uniquely warm and welcoming experience. You'll find we listen to your treatment goals and make your visits as comfortable as possible. Our goal is to offer the very best quality care in an environment that values each patient. We'll help you achieve a beautiful and healthy smile."
-    - "You can access our website to request an appointment, and find answers to your dental questions including procedure animations and informational resources."
-    - "Information about our office, including directions, forms you can fill out prior to your visit, insurance carrier and forms of payment accepted are available online. Please don't hesitate to <a href=\"/contact-form\">contact</a> us as well and enjoy your online visit."
+    - >-
+      Welcome new and existing patients of Dr. Greg Waters, DDS to our online
+      resource. We try to make visiting our practice a uniquely warm and
+      welcoming experience. You'll find we listen to your treatment goals and
+      make your visits as comfortable as possible. Our goal is to offer the very
+      best quality care in an environment that values each patient. We'll help
+      you achieve a beautiful and healthy smile.
+    - >-
+      You can access our website to request an appointment, and find answers to
+      your dental questions including procedure animations and informational
+      resources.
+    - >-
+      Information about our office, including directions, forms you can fill out
+      prior to your visit, insurance carrier and forms of payment accepted are
+      available online. Please don't hesitate to <a
+      href="/contact-form">contact</a> us as well and enjoy your online visit.
 section3:
-  header: "Clinically Proven State-of-the-Art Dental Technology"
-  body: "<p>Dr. Waters uses modern, clinically proven methods to offer his patients the best quality care available. His practice is equipped with state of the art E4D technology, which can mill a custom crown on-site. Often with a single visit, Dr. Waters can offer procedures which previously required weeks.</p>
-         <p>Same Day Crown: You may prefer the convenience and health benefits of eliminating multiple trips when a crowning procedure is necessary.</p>"
+  body: >-
+    Dr. Waters uses modern, clinically proven methods to offer his patients the
+    best quality care available. His practice is equipped with state of the art
+    E4D technology, which can mill a custom crown on-site. Often with a single
+    visit, Dr. Waters can offer procedures which previously required weeks.
+
+
+    Same Day Crown: You may prefer the convenience and health benefits of
+    eliminating multiple trips when a crowning procedure is necessary.
+  header: Clinically Proven State-of-the-Art Dental Technology
   text:
-    - "Dr. Waters uses modern, clinically proven methods to offer his patients the best quality care available. His practice is equipped with state of the art E4D technology, which can mill a custom crown on-site. Often with a single visit, Dr. Waters can offer procedures which previously required weeks."
-    - "Same Day Crown: You may prefer the convenience and health benefits of eliminating multiple trips when a crowning procedure is necessary."
+    - >-
+      Dr. Waters uses modern, clinically proven methods to offer his patients
+      the best quality care available. His practice is equipped with state of
+      the art E4D technology, which can mill a custom crown on-site. Often with
+      a single visit, Dr. Waters can offer procedures which previously required
+      weeks.
+    - >-
+      Same Day Crown: You may prefer the convenience and health benefits of
+      eliminating multiple trips when a crowning procedure is necessary.
