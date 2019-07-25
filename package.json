@@ -12,6 +12,7 @@
     "@gridsome/plugin-sitemap": "^0.1.1",
     "@gridsome/source-filesystem": "^0.3.0",
     "@gridsome/transformer-remark": "^0.2.1",
+    "@gridsome/transformer-yaml": "^0.2.1",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.18",
     "chalk": "^2.4.2",
