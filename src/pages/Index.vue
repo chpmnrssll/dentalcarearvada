@@ -30,17 +30,8 @@
                   :alt="homeData.banner.directions.title"
                   class="svg-icon"
                 />
-                <g-image
-                  :src="$page.homeData.edges[0].node.banner.directions.image"
-                  :alt="$page.homeData.edges[0].node.banner.directions.title"
-                  class="svg-icon"
-                />
-                <h3 class="m-0 pt-4 text-light">
-                  {{ $page.homeData.edges[0].node.banner.directions.title }}
-                </h3>
-                <p class="text-center text-light">
-                  {{ $page.homeData.edges[0].node.banner.directions.text }}
-                </p>
+                <h3 class="m-0 pt-4 text-light" v-html="homeData.banner.directions.title" />
+                <p class="text-center text-light" v-html="homeData.banner.directions.text" />
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
@@ -50,8 +41,8 @@
                   :alt="homeData.banner.forms.title"
                   class="svg-icon"
                 />
-                <h3 class="m-0 pt-4 text-light">{{ homeData.banner.forms.title }}</h3>
-                <p class="text-center text-light">{{ homeData.banner.forms.text }}</p>
+                <h3 class="m-0 pt-4 text-light" v-html="homeData.banner.forms.title" />
+                <p class="text-center text-light" v-html="homeData.banner.forms.text" />
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
@@ -61,8 +52,8 @@
                   :alt="homeData.banner.contact.title"
                   class="svg-icon"
                 />
-                <h3 class="m-0 pt-4 text-light">{{ homeData.banner.contact.title }}</h3>
-                <p class="text-center text-light">{{ homeData.banner.contact.text }}</p>
+                <h3 class="m-0 pt-4 text-light" v-html="homeData.banner.contact.title" />
+                <p class="text-center text-light" v-html="homeData.banner.contact.text" />
               </g-link>
             </b-col>
           </b-row>
@@ -124,6 +115,7 @@ query HomeData {
         banner {
           contact {
             href
+            image
             text
             title
           }
@@ -135,6 +127,7 @@ query HomeData {
           }
           forms {
             href
+            image
             text
             title
           }
@@ -154,13 +147,7 @@ query HomeData {
 </page-query>
 
 <script>
-import HeroSection from '~/components/HeroSection.vue';
-/* eslint import/no-unresolved: off */
-// import SVGMap from '~/assets/images/map.svg';
-// import SVGUser from '~/assets/images/user.svg';
-// import SVGMail from '~/assets/images/mail.svg';
-
-import homeData from '~/data/home.yml';
+import HeroSection from '../components/HeroSection.vue';
 
 export default {
   metaInfo() {
@@ -171,26 +158,21 @@ export default {
   },
   components: {
     HeroSection,
-    // SVGMap,
-    // SVGUser,
-    // SVGMail,
   },
   data() {
-    return {
-      homeData,
-    };
+    return {};
   },
   computed: {
-    bannerLinks() {
-      return homeData.bannerLinks;
+    homeData() {
+      // mirror page query data to computed prop
+      return this.$page.homeData.edges[0].node;
     },
   },
-  mounted() {
-    // console.log(this.$page.homeData.edges[0].node.banner.directions.image);
-    document.querySelectorAll('.svg-icon').forEach(el => {
-      el.setAttribute('viewBox', '0 0 24 24');
-    });
-  },
+  // mounted() {
+  //   document.querySelectorAll('.svg-icon').forEach(el => {
+  //     el.setAttribute('viewBox', '0 0 24 24');
+  //   });
+  // },
 };
 </script>
 
@@ -232,8 +214,5 @@ p {
   color: #f8f9fa;
   width: 48px;
   height: 48px;
-  path {
-    stroke: currentColor;
-  }
 }
 </style>
