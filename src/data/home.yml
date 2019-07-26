@@ -10,7 +10,7 @@ banner:
     title: Contact
   directions:
     href: /directions
-    image: ../assets/images/map.svg
+    image: /../assets/images/map.svg
     text: Search locations on Google Map
     title: Find Location
   forms:
