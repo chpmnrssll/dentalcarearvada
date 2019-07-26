@@ -164,8 +164,11 @@ export default {
   },
   computed: {
     homeData() {
-      // mirror page query data to computed prop
-      return this.$page.homeData.edges[0].node;
+      const data = this.$page.homeData.edges[0].node;
+      data.banner.contact.image = data.banner.contact.image.replace('/src', '..');
+      data.banner.directions.image = data.banner.directions.image.replace('/src', '..');
+      data.banner.forms.image = data.banner.forms.image.replace('/src', '..');
+      return data;
     },
   },
   // mounted() {

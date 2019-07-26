@@ -4,7 +4,7 @@ backend:
   squash_merges: true
 
 media_folder: "/src/assets/images"
-public_folder: "../assets/images"
+public_folder: "/src/assets/images"
 
 collections:
   - label: "Pages"
