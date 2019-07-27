@@ -3,8 +3,8 @@ backend:
   repo: "chpmnrssll/dentalcarearvada"
   squash_merges: true
 
-media_folder: "/src/assets/images"
-public_folder: "/src/assets/images"
+media_folder: "/static/assets/images"    # repo location
+public_folder: "/static/assets/images"   # build location
 
 collections:
   - label: "Pages"

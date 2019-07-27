@@ -5,17 +5,17 @@ buttonText: Book an appointment
 banner:
   contact:
     href: /contact-form
-    image: /src/assets/images/mail.svg
+    image: /static/assets/images/mail.svg
     text: Send us your questions
     title: Contact
   directions:
     href: /directions
-    image: /src/assets/images/map.svg
+    image: /static/assets/images/map.svg
     text: Search locations on Google Map
     title: Find Location
   forms:
     href: /forms
-    image: /src/assets/images/user.svg
+    image: /static/assets/images/user.svg
     text: Fill in details to get started
     title: New Patients
 section2:
