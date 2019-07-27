@@ -10,15 +10,17 @@ class YamlTransformer {
   parse(content) {
     let data = jsYaml.load(content);
 
-    // flatten simplifies recursively searching all children for images
+    // flatten simplifies recursively searching child nodes for images
     const flatData = flatten(data);
 
     Object.keys(flatData)
       // only keys that end with '.image'
       .filter(key => key.lastIndexOf('.image') !== -1)
       .forEach(imageKey => {
-        // prepend '../../' to path (relative path from /src/pages/ directory)
-        flatData[imageKey] = `../../${flatData[imageKey]}`;
+        // g-image src requires a relative path to the image, netlify-cms outputs
+        // an absolute path. Prepending '../../static' to the netlifys' public_folder
+        // gives the relative path from '/src/pages'
+        flatData[imageKey] = `../../static${flatData[imageKey]}`;
       });
 
     data = unflatten(flatData);
