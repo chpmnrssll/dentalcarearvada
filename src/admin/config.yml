@@ -26,45 +26,50 @@ collections:
         name: "homePage"
         file: "/src/data/home.yml"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Header", name: "header", widget: "string" }
-          - { label: "Sub Header", name: "subHeader", widget: "string" }
-          - { label: "CTA Button Text", name: "buttonText", widget: "string" }
-
-          - label: "Banner"
-            name: "banner"
+          - label: "Section 1"
+            name: "section1"
             widget: "object"
             fields:
-              - label: "Directions"
-                name: "directions"
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Sub Header", name: "subHeader", widget: "string" }
+              - { label: "CTA Button Text", name: "buttonText", widget: "string" }
+              - label: "Banner"
+                name: "banner"
                 widget: "object"
                 fields:
-                  - { label: "URL", name: "href", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Text", name: "text", widget: "string" }
-              - label: "Forms"
-                name: "forms"
-                widget: "object"
-                fields:
-                  - { label: "URL", name: "href", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Text", name: "text", widget: "string" }
-              - label: "Contact"
-                name: "contact"
-                widget: "object"
-                fields:
-                  - { label: "URL", name: "href", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Text", name: "text", widget: "string" }
+                  - label: "Directions"
+                    name: "directions"
+                    widget: "object"
+                    fields:
+                      - { label: "URL", name: "href", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+                  - label: "Forms"
+                    name: "forms"
+                    widget: "object"
+                    fields:
+                      - { label: "URL", name: "href", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+                  - label: "Contact"
+                    name: "contact"
+                    widget: "object"
+                    fields:
+                      - { label: "URL", name: "href", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
 
           - label: "Section 2"
             name: "section2"
             widget: "object"
             fields:
               - { label: "Header", name: "header", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
               - { label: "Body", name: "body", widget: "markdown" }
 
           - label: "Section 3"
@@ -72,6 +77,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Header", name: "header", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
               - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Our Practice"

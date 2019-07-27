@@ -1,24 +1,28 @@
-title: Dental Care Arvada
-header: A better life starts with a beautiful smile
-subHeader: Care in an environment of excellence
-buttonText: Book an appointment
-banner:
-  contact:
-    href: /contact-form
-    image: /assets/images/mail.svg
-    text: Send us your questions
-    title: Contact
-  directions:
-    href: /directions
-    image: /assets/images/map.svg
-    text: Search locations on Google Map
-    title: Find Location
-  forms:
-    href: /forms
-    image: /assets/images/user.svg
-    text: Fill in details to get started
-    title: New Patients
+section1:
+  title: Dental Care Arvada
+  image: /assets/images/dental.jpg
+  header: A better life starts with a beautiful smile
+  subHeader: Care in an environment of excellence
+  buttonText: Book an appointment
+  banner:
+    contact:
+      href: /contact-form
+      image: /assets/images/mail.svg
+      text: Send us your questions
+      title: Contact
+    directions:
+      href: /directions
+      image: /assets/images/map.svg
+      text: Search locations on Google Map
+      title: Find Location
+    forms:
+      href: /forms
+      image: /assets/images/user.svg
+      text: Fill in details to get started
+      title: New Patients
 section2:
+  header: Three times voted "Denver's Top Dentists" in 5280 Magazine!
+  image: /assets/images/5280_TopDentistsLogo_2015.svg
   body: >-
     Welcome new and existing patients of Dr. Greg Waters, DDS to our online
     resource. We try to make visiting our practice a uniquely warm and welcoming
@@ -37,8 +41,9 @@ section2:
     prior to your visit, insurance carrier and forms of payment accepted are
     available online. Please don't hesitate to [contact](/contact-form) us as
     well and enjoy your online visit.
-  header: Three times voted "Denver's Top Dentists" in 5280 Magazine!
 section3:
+  header: Clinically Proven State-of-the-Art Dental Technology
+  image: /assets/images/E4D-machine.png
   body: >-
     Dr. Waters uses modern, clinically proven methods to offer his patients the
     best quality care available. His practice is equipped with state of the art
@@ -48,4 +53,3 @@ section3:
 
     Same Day Crown: You may prefer the convenience and health benefits of
     eliminating multiple trips when a crowning procedure is necessary.
-  header: Clinically Proven State-of-the-Art Dental Technology

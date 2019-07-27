@@ -3,16 +3,16 @@
     <section class="pageContent">
       <HeroSection section-height="650px">
         <template v-slot:background>
-          <g-image src="~/assets/images/dental.jpg" alt="" immediate />
+          <g-image :src="homeData.section1.image" :alt="homeData.section1.image.src" immediate />
         </template>
         <template v-slot:body>
           <b-container class="m-4 p-0 m-lg-auto px-lg-3">
             <b-row>
               <b-col cols="7" class="mt-md-4">
-                <h1 class="text-dark mb-4">{{ homeData.header }}</h1>
-                <h3 class="text-dark mb-4">{{ homeData.subHeader }}</h3>
+                <h1 class="text-dark mb-4">{{ homeData.section1.header }}</h1>
+                <h3 class="text-dark mb-4">{{ homeData.section1.subHeader }}</h3>
                 <b-button @click="" variant="secondary" class="mt-4 py-3 px-5">
-                  {{ homeData.buttonText }}
+                  {{ homeData.section1.buttonText }}
                 </b-button>
               </b-col>
             </b-row>
@@ -26,34 +26,40 @@
             <b-col xs="12" md="4" class="text-center">
               <g-link to="/directions">
                 <g-image
-                  :src="homeData.banner.directions.image"
-                  :alt="homeData.banner.directions.title"
+                  :src="homeData.section1.banner.directions.image"
+                  :alt="homeData.section1.banner.directions.title"
                   class="svg-icon"
                 />
-                <h3 class="m-0 pt-4 text-light" v-html="homeData.banner.directions.title" />
-                <p class="text-center text-light" v-html="homeData.banner.directions.text" />
+                <h3
+                  class="m-0 pt-4 text-light"
+                  v-html="homeData.section1.banner.directions.title"
+                />
+                <p
+                  class="text-center text-light"
+                  v-html="homeData.section1.banner.directions.text"
+                />
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/forms">
                 <g-image
-                  :src="homeData.banner.forms.image"
-                  :alt="homeData.banner.forms.title"
+                  :src="homeData.section1.banner.forms.image"
+                  :alt="homeData.section1.banner.forms.title"
                   class="svg-icon"
                 />
-                <h3 class="m-0 pt-4 text-light" v-html="homeData.banner.forms.title" />
-                <p class="text-center text-light" v-html="homeData.banner.forms.text" />
+                <h3 class="m-0 pt-4 text-light" v-html="homeData.section1.banner.forms.title" />
+                <p class="text-center text-light" v-html="homeData.section1.banner.forms.text" />
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
               <g-link to="/contact-form">
                 <g-image
-                  :src="homeData.banner.contact.image"
-                  :alt="homeData.banner.contact.title"
+                  :src="homeData.section1.banner.contact.image"
+                  :alt="homeData.section1.banner.contact.title"
                   class="svg-icon"
                 />
-                <h3 class="m-0 pt-4 text-light" v-html="homeData.banner.contact.title" />
-                <p class="text-center text-light" v-html="homeData.banner.contact.text" />
+                <h3 class="m-0 pt-4 text-light" v-html="homeData.section1.banner.contact.title" />
+                <p class="text-center text-light" v-html="homeData.section1.banner.contact.text" />
               </g-link>
             </b-col>
           </b-row>
@@ -65,11 +71,12 @@
           <b-container class="m-lg-auto p-1 p-md-3 px-lg-3">
             <b-row>
               <b-col md="12" lg="4">
-                <g-image
+                <!-- <g-image
                   src="~/assets/images/5280_TopDentistsLogo_2015.svg"
                   alt="5280 Top Dentists 2015"
                   class="w-100"
-                />
+                /> -->
+                <g-image :src="homeData.section2.image" alt="" class="w-100" />
               </b-col>
               <b-col lg="7" class="d-flex flex-column justify-content-center">
                 <b-container class="px-0">
@@ -92,7 +99,8 @@
               </b-col>
               <b-col md="12" lg="4" class="d-flex p-0">
                 <b-container>
-                  <g-image src="~/assets/images/E4D-machine.png" class="p-2 w-100" />
+                  <!-- <g-image src="~/assets/images/E4D-machine.png" class="p-2 w-100" /> -->
+                  <g-image :src="homeData.section3.image" alt="" class="p-2 w-100" />
                 </b-container>
               </b-col>
             </b-row>
@@ -108,37 +116,42 @@ query HomeData {
   homeData: allhomeData {
     edges {
       node {
-        title
-        header
-        subHeader
-        buttonText
-        banner {
-          contact {
-            href
-            image
-            text
-            title
-          }
-          directions {
-            href
-            image
-            text
-            title
-          }
-          forms {
-            href
-            image
-            text
-            title
+        section1 {
+          title
+          image
+          header
+          subHeader
+          buttonText
+          banner {
+            contact {
+              href
+              image
+              text
+              title
+            }
+            directions {
+              href
+              image
+              text
+              title
+            }
+            forms {
+              href
+              image
+              text
+              title
+            }
           }
         }
         section2 {
-          body
           header
+          image
+          body
         }
         section3 {
-          body
           header
+          image
+          body
         }
       }
     }
