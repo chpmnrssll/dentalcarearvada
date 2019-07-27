@@ -5,13 +5,18 @@ const siteData = {
   siteDescription:
     'Dentist Greg Waters quality dental care in Arvada, CO 80004. Waterlase, E4D, invisalign, General dentistry.',
 };
-
 module.exports = {
   ...siteData,
   metaData: {
     ...siteData,
   },
+  transformers: {
+    yamlNetlify: {},
+  },
   plugins: [
+    {
+      use: 'gridsome-transformer-yamlNetlify',
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -43,6 +48,9 @@ module.exports = {
       options: {
         path: 'src/data/home.yml',
         typeName: 'homeData',
+        yamlNetlify: {
+          plugins: [],
+        },
       },
     },
     {
