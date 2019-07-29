@@ -1,10 +1,5 @@
 section1:
   banner:
-    contact:
-      href: /contact-form
-      image: /assets/images/mail.svg
-      text: Send us your questions
-      title: Contact
     directions:
       href: /directions
       image: /assets/images/map.svg
@@ -15,6 +10,11 @@ section1:
       image: /assets/images/user.svg
       text: Fill in details to get started
       title: New Patients
+    contact:
+      href: /contact-form
+      image: /assets/images/mail.svg
+      text: Send us your questions
+      title: Contact
   buttonText: Book an appointment
   header: A better life starts with a beautiful smile
   image: /assets/images/dental.jpg
