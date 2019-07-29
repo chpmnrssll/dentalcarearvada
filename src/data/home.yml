@@ -12,7 +12,7 @@ section1:
       title: Find Location
     forms:
       href: /forms
-      image: /assets/images/E4D-machine.png
+      image: /assets/images/user.svg
       text: Fill in details to get started
       title: New Patients
   buttonText: Book an appointment
