@@ -11,11 +11,11 @@ module.exports = {
     ...siteData,
   },
   transformers: {
-    yamlNetlify: {},
+    netlify: {},
   },
   plugins: [
     {
-      use: 'gridsome-transformer-yamlNetlify',
+      use: 'gridsome-transformer-netlify',
     },
     {
       use: '@gridsome/source-filesystem',
@@ -48,9 +48,6 @@ module.exports = {
       options: {
         path: 'src/data/home.yml',
         typeName: 'homeData',
-        yamlNetlify: {
-          plugins: [],
-        },
       },
     },
     {

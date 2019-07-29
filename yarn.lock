@@ -5985,8 +5985,10 @@ gridsome-plugin-purgecss@^1.0.12:
   dependencies:
     "@fullhuman/postcss-purgecss" latest
 
-gridsome-transformer-yamlNetlify@./src/transformer-yamlNetlify:
-  version "1.0.0"
+gridsome-transformer-netlify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gridsome-transformer-netlify/-/gridsome-transformer-netlify-1.0.1.tgz#591900e2ebecf36746dca86c2d4a1789a0f39fc0"
+  integrity sha512-I3sEdKE/ibeFc4hI7iGwQCk9mEYBc2zmhpU4Fv77/Sf4CyXBKAPrZ/q4JepVI51vl4Tcn6casmLs9TMJdRH8zw==
   dependencies:
     flat "^4.1.0"
     js-yaml "^3.13.1"
