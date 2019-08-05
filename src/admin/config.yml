@@ -7,16 +7,6 @@ media_folder: "/static/assets/images"   # file location in repository
 public_folder: "/assets/images"         # file location in production build (saved to yaml)
 
 collections:
-  - label: "Pages"
-    name: "pages"
-    folder: "/userPages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Show in site navigation", name: "showNavLink", widget: "boolean", default: false, required: false }
-      - { label: "Path", name: "path", widget: "string", required: false }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
   - label: "Settings"
     name: "settings"
     editor:
@@ -94,6 +84,17 @@ collections:
         fields:
           - { label: "Text", name: "text", widget: "string" }
           - { label: "Show Netlify-CMS Link", name: "netlifyCMSLink", widget: "boolean", default: true, required: false }
+
+  - label: "Pages"
+    name: "pages"
+    folder: "/userPages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Show in site navigation", name: "showNavLink", widget: "boolean", default: false, required: false }
+      - { label: "Path", name: "path", widget: "string", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - label: "Reviews"
     name: "reviews"

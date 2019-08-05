@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import directionsData from '../data/directions.yml';
-
 export default {
   metaInfo() {
     return {
@@ -24,11 +22,6 @@ export default {
         { itemprop: 'name', content: 'Directions & Map' },
         { property: 'og:title', content: 'Directions & Map' },
       ],
-    };
-  },
-  data() {
-    return {
-      directionsData,
     };
   },
 };

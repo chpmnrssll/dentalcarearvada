@@ -47,6 +47,20 @@ module.exports = {
       },
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/practice.yml',
+        typeName: 'practiceData',
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/footer.yml',
+        typeName: 'footerData',
+      },
+    },
+    {
       use: 'gridsome-plugin-netlify-cms',
       options: {
         publicPath: '/admin',

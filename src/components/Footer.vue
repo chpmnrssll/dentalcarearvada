@@ -20,18 +20,30 @@
   </section>
 </template>
 
+<static-query>
+query footerData {
+  footerData: allfooterData {
+    edges {
+      node {
+        text
+        netlifyCMSLink
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
 import Logo from './Logo.vue';
-import footerData from '../data/footer.yml';
 
 export default {
   components: {
     Logo,
   },
-  data() {
-    return {
-      footerData,
-    };
+  computed: {
+    footerData() {
+      return this.$static.footerData.edges[0].node;
+    },
   },
 };
 </script>

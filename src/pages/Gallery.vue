@@ -116,9 +116,22 @@
   </DefaultLayout>
 </template>
 
+<page-query>
+query practiceData {
+  practiceData: allpracticeData {
+    edges {
+      node {
+        header
+        text
+        footer
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 import HeroSection from '../components/HeroSection.vue';
-import practiceData from '../data/practice.yml';
 
 export default {
   metaInfo() {
@@ -133,10 +146,10 @@ export default {
   components: {
     HeroSection,
   },
-  data() {
-    return {
-      practiceData,
-    };
+  computed: {
+    practiceData() {
+      return this.$page.practiceData.edges[0].node;
+    },
   },
 };
 </script>

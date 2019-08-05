@@ -71,11 +71,6 @@
           <b-container class="m-lg-auto p-1 p-md-3 px-lg-3">
             <b-row>
               <b-col md="12" lg="4">
-                <!-- <g-image
-                  src="~/assets/images/5280_TopDentistsLogo_2015.svg"
-                  alt="5280 Top Dentists 2015"
-                  class="w-100"
-                /> -->
                 <g-image :src="homeData.section2.image" alt="" class="w-100" />
               </b-col>
               <b-col lg="7" class="d-flex flex-column justify-content-center">
@@ -99,7 +94,6 @@
               </b-col>
               <b-col md="12" lg="4" class="d-flex p-0">
                 <b-container>
-                  <!-- <g-image src="~/assets/images/E4D-machine.png" class="p-2 w-100" /> -->
                   <g-image :src="homeData.section3.image" alt="" class="p-2 w-100" />
                 </b-container>
               </b-col>
@@ -172,13 +166,9 @@ export default {
   components: {
     HeroSection,
   },
-  data() {
-    return {};
-  },
   computed: {
     homeData() {
-      const data = this.$page.homeData.edges[0].node;
-      return data;
+      return this.$page.homeData.edges[0].node;
     },
   },
 };
