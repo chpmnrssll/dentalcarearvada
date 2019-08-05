@@ -1,4 +1,3 @@
-// const path = require('path');
 const siteData = {
   siteName: 'Dental Care Arvada',
   siteUrl: 'https://dentalcarearvada.netlify.com/',
@@ -14,9 +13,6 @@ module.exports = {
     netlify: {},
   },
   plugins: [
-    // {
-    //   use: 'gridsome-transformer-netlify',
-    // },
     {
       use: '@gridsome/source-filesystem',
       options: {
