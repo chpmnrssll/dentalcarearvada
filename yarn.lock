@@ -1003,6 +1003,13 @@
     unist-util-visit "^1.4.0"
     vfile "^4.0.0"
 
+"@gridsome/transformer-yaml@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@gridsome/transformer-yaml/-/transformer-yaml-0.2.1.tgz#3bd70830f3cb627be3e27848d99a437fe15581b9"
+  integrity sha512-SEYW6fl6dmNvz3/6dnjGukVFxL7ymMyjW7yCihfHzTHI0oJP89fcDhz0wbGH0bEA/BIx73T59zjP1selxvBT2w==
+  dependencies:
+    js-yaml "^3.12.1"
+
 "@hjvedvik/tasks@^0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@hjvedvik/tasks/-/tasks-0.0.8.tgz#69440b92fccbe22c20c8d8788e723eac8f60aa59"
@@ -5963,6 +5970,13 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
+gridsome-plugin-netlify-cms-paths@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-netlify-cms-paths/-/gridsome-plugin-netlify-cms-paths-0.3.0.tgz#17e42319fd9aba0dc7d8175a2d54aa272f6ab6cd"
+  integrity sha512-knjJgY9tYWVbzFXqVnJVnx+ZK9s1MftaeZJws2eZ92/gJT4pD2pQKj7EIB5yZ1YjBt/KhAdOJr2IsTYh04LF8g==
+  dependencies:
+    js-yaml "^3.13.1"
+
 gridsome-plugin-netlify-cms@^1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/gridsome-plugin-netlify-cms/-/gridsome-plugin-netlify-cms-1.0.7.tgz#b64a030afe8ba05b4d39d873b50cff3d9eefdc39"
@@ -5984,14 +5998,6 @@ gridsome-plugin-purgecss@^1.0.12:
   integrity sha512-SWYUKV2jb0RJrxgLzOx6wKJzEtNu79bzZuZDNMyVH+NqouFGqJQDUUaQqZpKQmgGMdb0P8gAwLx4KQBTYWvFBw==
   dependencies:
     "@fullhuman/postcss-purgecss" latest
-
-gridsome-transformer-netlify@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gridsome-transformer-netlify/-/gridsome-transformer-netlify-1.0.1.tgz#591900e2ebecf36746dca86c2d4a1789a0f39fc0"
-  integrity sha512-I3sEdKE/ibeFc4hI7iGwQCk9mEYBc2zmhpU4Fv77/Sf4CyXBKAPrZ/q4JepVI51vl4Tcn6casmLs9TMJdRH8zw==
-  dependencies:
-    flat "^4.1.0"
-    js-yaml "^3.13.1"
 
 gridsome@^0.6.6:
   version "0.6.6"
@@ -7395,7 +7401,7 @@ js-sha256@^0.9.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@*, js-yaml@3.13.1, js-yaml@^3.11.0, js-yaml@^3.12.2, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.5.2, js-yaml@^3.9.0:
+js-yaml@*, js-yaml@3.13.1, js-yaml@^3.11.0, js-yaml@^3.12.1, js-yaml@^3.12.2, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.5.2, js-yaml@^3.9.0:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==

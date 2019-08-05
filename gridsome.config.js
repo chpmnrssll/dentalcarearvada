@@ -14,9 +14,9 @@ module.exports = {
     netlify: {},
   },
   plugins: [
-    {
-      use: 'gridsome-transformer-netlify',
-    },
+    // {
+    //   use: 'gridsome-transformer-netlify',
+    // },
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -55,6 +55,12 @@ module.exports = {
       options: {
         publicPath: '/admin',
         modulePath: 'src/admin/index.js',
+      },
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['homeData'],
       },
     },
     {
