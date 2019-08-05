@@ -1,8 +1,10 @@
 ---
 showNavLink: true
+path: Insurance--Preferred-Dental-Provider
 title: Preferred Provider
-path: "Insurance--Preferred-Dental-Provider"
 ---
+![ed4](/assets/images/E4D-machine.png "ed4")
+
 ## Preferred Provider
 
 Dr. Waters proudly participates as a preferred provider for the following Dental Health Insurance Plans:
