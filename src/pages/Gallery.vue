@@ -33,7 +33,7 @@
             <b-container fluid>
               <b-row class="py-5">
                 <b-col xs="12" sm="6" lg="3" class="text-center py-5">
-                  <g-link to="/directions">
+                  <g-link to="/directions" class="text-decoration-none">
                     <g-image src="~/assets/images/icon04.png" alt="Dentist" />
                     <h3 class="py-2 text-dark">Highly trained dental team</h3>
                     <p class="text-center text-dark">
@@ -43,7 +43,7 @@
                   </g-link>
                 </b-col>
                 <b-col xs="12" sm="6" lg="3" class="text-center py-5">
-                  <g-link to="/forms">
+                  <g-link to="/forms" class="text-decoration-none">
                     <g-image src="~/assets/images/icon03.png" alt="Treatment" />
                     <h3 class="py-2 text-dark">Advance treatment</h3>
                     <p class="text-center text-dark">
@@ -53,7 +53,7 @@
                   </g-link>
                 </b-col>
                 <b-col xs="12" sm="6" lg="3" class="text-center py-5">
-                  <g-link to="/contact-form">
+                  <g-link to="/contact-form" class="text-decoration-none">
                     <g-image src="~/assets/images/icon02.png" alt="Guaranteed results" />
                     <h3 class="py-2 text-dark">Guaranteed results</h3>
                     <p class="text-center text-dark">
@@ -63,7 +63,7 @@
                   </g-link>
                 </b-col>
                 <b-col xs="12" sm="6" lg="3" class="text-center py-5">
-                  <g-link to="/contact-form">
+                  <g-link to="/contact-form" class="text-decoration-none">
                     <g-image src="~/assets/images/icon01.png" alt="Modern tech & equipment" />
                     <h3 class="py-2 text-dark">Modern tech &amp; equipment</h3>
                     <p class="text-center text-dark">

@@ -88,7 +88,7 @@
         <template v-slot:body>
           <b-container class="m-lg-auto p-1 pb-3 my-3 pt-md-0 p-md-3 px-lg-3">
             <b-row>
-              <b-col lg="6" offset="1" class="d-flex flex-column justify-content-center p-4">
+              <b-col lg="6" offset-lg="1" class="d-flex flex-column justify-content-center p-4">
                 <h3 class="mb-4" v-html="homeData.section3.header" />
                 <p class="mb-4" v-html="homeData.section3.body" />
               </b-col>
@@ -187,12 +187,12 @@ p {
   margin-bottom: 1.6em;
 }
 .banner {
-  // position: relative;
-  // top: -4rem;
-  //
-  // @media (max-width: 1024px) {
-  //   top: 0;
-  // }
+  position: relative;
+  top: -4rem;
+
+  @media (max-width: 1024px) {
+    top: 0;
+  }
   p {
     font-size: 100%;
   }
