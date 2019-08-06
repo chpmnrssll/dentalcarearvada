@@ -67,12 +67,12 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  height: 100vh;
+  // min-height: 100vh;
   width: 100%;
 }
 .g-image {
   left: 0;
-  height: 100%;
+  min-height: 100vh;
   object-fit: cover;
   pointer-events: none;
   position: absolute;
@@ -86,9 +86,8 @@ section {
   background-color: transparent;
   background-image: linear-gradient(225deg, var(--primaryBlue) 0%, var(--primaryGreen) 65%);
   left: 0;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
+  min-height: 100vh;
+  overflow-x: hidden;
   width: 100%;
 }
 .gradient-overlay {

@@ -1,7 +1,7 @@
 <template>
   <DefaultLayout>
     <section class="pageContent">
-      <HeroSection section-height="650px">
+      <HeroSection>
         <template v-slot:background>
           <g-image :src="homeData.section1.image" :alt="homeData.section1.image.src" immediate />
         </template>
@@ -24,7 +24,7 @@
         <b-container fluid>
           <b-row class="p-5">
             <b-col xs="12" md="4" class="text-center">
-              <g-link to="/directions">
+              <g-link to="/directions" class="text-decoration-none">
                 <g-image
                   :src="homeData.section1.banner.directions.image"
                   :alt="homeData.section1.banner.directions.title"
@@ -41,7 +41,7 @@
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
-              <g-link to="/forms">
+              <g-link to="/forms" class="text-decoration-none">
                 <g-image
                   :src="homeData.section1.banner.forms.image"
                   :alt="homeData.section1.banner.forms.title"
@@ -52,7 +52,7 @@
               </g-link>
             </b-col>
             <b-col xs="12" md="4" class="text-center pt-sm-0 pt-5">
-              <g-link to="/contact-form">
+              <g-link to="/contact-form" class="text-decoration-none">
                 <g-image
                   :src="homeData.section1.banner.contact.image"
                   :alt="homeData.section1.banner.contact.title"
@@ -66,7 +66,7 @@
         </b-container>
       </section>
 
-      <HeroSection section-height="650px">
+      <HeroSection class="intro">
         <template v-slot:body>
           <b-container class="m-lg-auto p-1 p-md-3 px-lg-3">
             <b-row>
@@ -186,14 +186,13 @@ h1 {
 p {
   margin-bottom: 1.6em;
 }
-
 .banner {
-  position: relative;
-  top: -4rem;
-
-  @media (max-width: 1024px) {
-    top: 0;
-  }
+  // position: relative;
+  // top: -4rem;
+  //
+  // @media (max-width: 1024px) {
+  //   top: 0;
+  // }
   p {
     font-size: 100%;
   }
@@ -207,6 +206,9 @@ p {
 .container-fluid {
   background-color: var(--primary);
   max-width: 1210px;
+}
+.intro {
+  padding-top: 6rem;
 }
 .svg-icon {
   color: #f8f9fa;
