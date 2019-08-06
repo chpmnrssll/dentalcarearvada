@@ -1003,13 +1003,6 @@
     unist-util-visit "^1.4.0"
     vfile "^4.0.0"
 
-"@gridsome/transformer-yaml@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@gridsome/transformer-yaml/-/transformer-yaml-0.2.1.tgz#3bd70830f3cb627be3e27848d99a437fe15581b9"
-  integrity sha512-SEYW6fl6dmNvz3/6dnjGukVFxL7ymMyjW7yCihfHzTHI0oJP89fcDhz0wbGH0bEA/BIx73T59zjP1selxvBT2w==
-  dependencies:
-    js-yaml "^3.12.1"
-
 "@hjvedvik/tasks@^0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@hjvedvik/tasks/-/tasks-0.0.8.tgz#69440b92fccbe22c20c8d8788e723eac8f60aa59"
@@ -5999,6 +5992,13 @@ gridsome-plugin-purgecss@^1.0.12:
   dependencies:
     "@fullhuman/postcss-purgecss" latest
 
+"gridsome-transformer-netlify@https://github.com/chpmnrssll/transformer-netlify.git":
+  version "1.0.0"
+  resolved "https://github.com/chpmnrssll/transformer-netlify.git#c1b38a4b3b075f66a6021a4ad629d46aee7704b2"
+  dependencies:
+    flat "^4.1.0"
+    js-yaml "^3.13.1"
+
 gridsome@^0.6.6:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.6.6.tgz#054ce5b4f4c43624fd4885cbadd116e4b12471e2"
@@ -7401,7 +7401,7 @@ js-sha256@^0.9.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@*, js-yaml@3.13.1, js-yaml@^3.11.0, js-yaml@^3.12.1, js-yaml@^3.12.2, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.5.2, js-yaml@^3.9.0:
+js-yaml@*, js-yaml@3.13.1, js-yaml@^3.11.0, js-yaml@^3.12.2, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.5.2, js-yaml@^3.9.0:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==

@@ -61,6 +61,9 @@ module.exports = {
       },
     },
     {
+      use: 'gridsome-transformer-netlify',
+    },
+    {
       use: 'gridsome-plugin-netlify-cms',
       options: {
         publicPath: '/admin',
@@ -70,7 +73,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
-        contentTypes: ['homeData'],
+        contentTypes: ['UserPage'],
       },
     },
     {
